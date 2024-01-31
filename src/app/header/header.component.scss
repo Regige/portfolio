@@ -1,0 +1,28 @@
+@import './../../styles.scss';
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 112px;
+    padding: 0 112px;
+
+    .header-links {
+        display: flex;
+        gap: 36px;
+
+        a {
+            cursor: pointer;
+            font-size: 23px;
+            line-height: 27.6px;
+            color: $cpt-color;
+            text-decoration: none;
+
+            &:hover {
+                cursor: pointer;
+                font-weight: 700;
+            }
+        }
+    }
+}

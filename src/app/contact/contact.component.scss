@@ -1,0 +1,117 @@
+@import './../../styles.scss';
+
+
+.contact-section {
+    padding: 0 112px 96px 112px;
+
+    h2 {
+        color: $cpt-color;
+        font-size: 90px;
+        line-height: 108px;
+        margin-bottom: 24px;
+    }
+
+        .contact-container {
+            display: flex;
+            gap: 64px;
+
+            .contact-text {
+                width: 50%;
+
+                h4 {
+                    color: $cpt-color;
+                    font-size: 32px;
+                    font-weight: 700;
+                    line-height: 38.4px;
+                    margin: 0;
+                }
+
+                p, span {
+                    font-size: 16px;
+                    line-height: 19.2px;
+                }
+
+                span {
+                    color: $cpt-color;
+
+                    a {
+                        font-weight: 800;
+                        color: $cpt-color;
+                        text-decoration: none;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            .contact-input {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 48px;
+                width: 50%;
+
+                .contact-input-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    gap: 32px;
+                    width: 100%;
+
+                    .input-field {
+                        border: 1px solid $cpt-color;
+                        border-radius: 10px;
+                        padding: 15px 25px;
+                        width: 100%;
+                        
+                        &::placeholder {
+                            color: black;
+                            font-family: 'Montserrat';
+                            font-size: 16px;
+                            line-height: 19.2px;
+                        }
+                    }
+
+                    textarea {
+                        border: 1px solid $cpt-color;
+                        border-radius: 10px;
+                        padding: 15px 25px;
+                        width: 100%;
+
+                        &::placeholder {
+                            color: black;
+                            font-family: 'Montserrat';
+                            font-size: 16px;
+                        }
+                    }
+
+                    .input-check-container {
+                        .input-check {
+                            margin: 0 6px 0 0;
+                        }
+                        label {
+                            font-size: 14px;
+                            line-height: 16.8px;
+                        }
+                    }
+
+                }
+
+                button {
+                    background-color: white;
+                    border: 2px solid #BBBBBB;
+                    border-radius: 10px;
+                    color: #BBBBBB;
+                    font-size: 23px;
+                    line-height: 27.6px;
+                    padding: 15px 30px;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+}

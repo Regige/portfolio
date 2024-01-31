@@ -1,0 +1,70 @@
+@import './../../../styles.scss';
+
+
+
+// .project-img {
+//     box-shadow: $cpt-box-shadow;
+//     // background-color: $cpt-color;
+//     height: 392px;
+//     width: 50%;
+        
+//     img {
+//         // height: 392px;
+//         object-fit: cover;
+//         // width: 620px;
+//     }
+// }
+
+img {
+    box-shadow: $cpt-box-shadow;
+    height: 392px;
+    object-fit: cover;
+    width: 50%;
+    transition: all ease-in-out 125ms;
+
+       &:hover {
+        cursor: pointer;
+        transform: scale(1.1) translateY(-32px);
+    }
+}
+
+.project-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 50%;
+
+    h3 {
+        font-size: 48px;
+        line-height: 48px;
+        margin: 0;
+    }
+
+    h4 {
+        font-size: 24px;
+           font-weight: 400;
+        line-height: 27.6px;
+        margin: 16px 0;    
+    }
+
+    h3, h4 {
+        color: $cpt-color;
+    }
+
+    button {
+        background-color: white;
+        border: 2px solid $cpt-color;
+        border-radius: 10px;
+        color: $cpt-color;
+        font-size: 24px;
+        line-height: 27.6px;
+        padding: 15px 30px;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: $cpt-box-shadow;
+        }
+    }
+}
+

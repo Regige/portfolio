@@ -1,0 +1,22 @@
+<div class="my-work-section">
+  <div>
+    <h2 class="ft-baloo">My work</h2>
+    <div class="my-work-text">
+      <p>
+        This page is a sample of my work - please feel free to try them out.
+      </p>
+      <div></div>
+    </div>
+  </div>
+  <div class="my-work-projects-list">
+    <app-project-sample
+      *ngFor="let project of myProjects; let i = index"
+      [class.flex-row-reverse]="i % 2 != 0"
+      [image]="project.image"
+      [name]="project.name"
+      [tools]="project.tools"
+      [description]="project.description"
+      [github]="project.link"
+    ></app-project-sample>
+  </div>
+</div>

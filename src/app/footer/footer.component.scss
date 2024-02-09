@@ -5,9 +5,30 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $cpt-color;
+    box-shadow: 0px -4px 0px 0px #FA7902;
+    background-color: $cpt-bg-color;
     height: 240px;
     padding: 0 112px;
+
+    .logo {
+        text-align: center;
+        text-decoration: none;
+        width: 104px;
+
+        span {
+            color: white;
+            font-size: 28px;
+            transition: all ease-in-out 125ms;
+    
+            b {
+                color: $cpt-color;
+            }
+    
+            &:hover {
+                font-size: 30px;
+            }
+        }
+    }
 
     .footer-impressum {
         color: white;
@@ -22,6 +43,7 @@
         a {
             color: white;
             font-size: 16px;
+            font-weight: 300;
             line-height: 19.2px;
             position: absolute;
             top: 48px;
@@ -31,7 +53,25 @@
 
             &:hover {
                 cursor: pointer;
+                font-weight: 500;
             }
+        }
+        a::after {
+            content: '';
+            position: absolute;
+            width: 70%;
+            transform: scaleX(0);
+            border-radius: 5px;
+            height: 0.05em;
+            bottom: 0;
+            left: 15%;
+            background: currentColor;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+        a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
         }
     }
 
@@ -40,9 +80,14 @@
         gap: 32px;
 
         a {
+            transition: all 125ms ease-in-out;
             img {
                 width: 30px;
                 height: auto;
+            }
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.2);
             }
         }
     }

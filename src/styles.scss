@@ -1,6 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
-$cpt-color: #5988FF;
+// $cpt-color: #5988FF;
+$cpt-color: #FF4747;
+$cpt-color-line: #FA7902;
+$cpt-bg-color: #c1b4a7;
+// $cpt-bg-color: #b4a494; //dunkler
+// $cpt-bg-color: white;
+// $cpt-bg-color: #141D2F;
 $cpt-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
 
 * {
@@ -8,9 +14,19 @@ $cpt-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
 body {
+    background-color: $cpt-bg-color;
+    // background-image: url('assets/img/bg_colors/group.svg'), url('assets/img/bg_colors/c_mid_big.svg');
+    // background-position: top, bottom;
+    // background-repeat: no-repeat;
+    color: white;
     margin: 0;
     height: 100vh;
-    font-family: 'Montserrat';
+    font-family: 'Poppins';
+    // font-family: 'Montserrat';
+}
+
+body {
+    background-position: 5% top, bottom;
 }
 
 h2 {
@@ -20,10 +36,14 @@ h2 {
 }
 
 .ft-baloo {
-    font-family: 'Baloo 2'; // noch mal schauen ob das wirklich die beste Lösung ist
+    // font-family: 'Baloo 2'; // noch mal schauen ob das wirklich die beste Lösung ist
+    font-family: 'Poppins';
 }
 
-
+.show {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
 
 
 

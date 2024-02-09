@@ -1,11 +1,17 @@
 div {
     // padding-left: 112px;
     // padding-right: 112px;
+    width: 100vw;
+    background-image: url('./../assets/img/bg_colors/c_mid.svg'), url('./../assets/img/bg_colors/o_mid.svg'), url('./../assets/img/bg_colors/c_big.svg'), url('./../assets/img/bg_colors/o_small.svg'), url('./../assets/img/bg_colors/c_mid_big.svg');
+        background-position: 150% 15%, -30% 25%, 150% 40%, -20% 62%, -40% 105%;
+        background-repeat: no-repeat;
 
     app-header {
         position: absolute;
         width: 100%;
     }
+
+
 }
 
 // .pad-sides {

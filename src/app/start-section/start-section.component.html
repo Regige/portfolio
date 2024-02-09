@@ -1,8 +1,19 @@
-<div class="start-section">
-  <img src="assets/img/profile.png" alt="" />
-  <div>
-    <h1>Hello! I am Regina</h1>
-    <h2 class="ft-baloo">FRONTEND</h2>
-    <h2 class="ft-baloo">DEVELOPER</h2>
+<div
+  class="start-section"
+  appInView
+  (visibilityChange)="onVisibilityChange($event)"
+>
+  <div id="start-screen-img" class="start-screen-img">
+    <img class="profil-bg-color" src="assets/img/bg_colors/group.svg" alt="" />
+    <img class="profil-img" src="assets/img/profile.png" alt="" />
+  </div>
+  <div id="start-screen-text" class="start-screen-text">
+    <h3>I am</h3>
+    <h1>Regina Gering</h1>
+    <h2 class="ft-baloo">FRONTEND DEVELOPER</h2>
+  </div>
+  <div id="cta-text" class="cta-text">
+    <span>Scroll down&nbsp;</span
+    ><img src="assets/img/icon/arrow-down.svg" alt="" />
   </div>
 </div>

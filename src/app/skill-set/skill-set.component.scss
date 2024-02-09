@@ -4,17 +4,31 @@
 .skill-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 48px;
-    background-color: $cpt-color;
-    color: white;
-    height: 632px;
-    padding: 0 112px;
+    // align-items: center;
+    // justify-content: center;
+    gap: 64px;
+    // background-color: $cpt-color;
+    // color: white;
+    // height: 632px;
+    padding: 64px 0 112px 0;
 
-    h2 {
-        font-size: 96px;
-        line-height: 96px;
+    .section-sep-element {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 32px;
+        
+        h2 {
+            color: $cpt-color;
+            font-size: 96px;
+            line-height: 96px;
+        }
+        
+        .section-line {
+            width: 80px;
+            height: 4px;
+            background-color: $cpt-color;
+        }
     }
 
     .skill-icon-container {
@@ -22,6 +36,11 @@
         justify-content: center;
         flex-wrap: wrap;
         width: 100%;
+        padding: 0 112px;
+        box-sizing: border-box;
+        opacity: 0;
+        transition: all 1s ease-in-out;
+        transform: translateX(200px);
 
         div {
             display: flex;
@@ -56,4 +75,14 @@
             // }
         }
     }
+}
+
+// .d-none {
+//     // display: none;
+//     opacity: 0;
+// }
+
+.show {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
 }

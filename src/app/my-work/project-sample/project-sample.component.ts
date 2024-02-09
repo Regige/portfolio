@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 
+
 @Component({
   selector: 'app-project-sample',
   standalone: true,
@@ -14,5 +15,7 @@ export class ProjectSampleComponent {
   @Input() tools:string = '';
   @Input() description:string = '';
   @Input() github:string = '';
+  @Input() showReverse:boolean = false;
+  @Input() i:number = 0;
 
 }

@@ -1,8 +1,11 @@
 <header>
-  <div>logo</div>
+  <!-- <img src="assets/img/logo.svg" alt="" /> -->
+  <a class="logo" href="#start-section"
+    ><span><b>R</b>egina</span></a
+  >
   <div class="header-links">
-    <a href="#about-me">About me</a>
-    <a href="#skill-set">Skill set</a>
+    <a (click)="scrollTo('about-me')">About me</a>
+    <a (click)="scrollTo('skill-set')">Skill set</a>
     <a href="#my-work">My work</a>
   </div>
 </header>

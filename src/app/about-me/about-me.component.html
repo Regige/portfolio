@@ -1,11 +1,35 @@
-<div class="about-me-section">
-  <h2 class="ft-baloo">Let's work together</h2>
-  <div class="about-me-text">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nesciunt
-      necessitatibus et beatae facere quod, culpa explicabo sunt sint modi.
-      Saepe voluptates laudantium officiis dolorem illum hic qui quam itaque?
-    </p>
-    <button>Send a message</button>
+<div
+  class="about-me-section"
+  appInView
+  (visibilityChange)="onVisibilityChange($event)"
+>
+  <div class="section-sep-element">
+    <div class="section-line"></div>
+    <div class="icon-container">
+      <a href="https://github.com/" target="_blank"
+        ><img src="assets/img/icon/github_w.svg" alt="" /></a
+      ><a href=""><img src="assets/img/icon/mail_w.svg" alt="" /></a
+      ><a href=""><img src="assets/img/icon/linkedin_w.svg" alt="" /></a>
+    </div>
+  </div>
+  <div class="about-me-content">
+    <h2 id="about-me-h2" class="ft-baloo">Let's work together</h2>
+    <div id="about-me-text" class="about-me-text">
+      <p>
+        I am a Front-end developer based in Munich, Germany. I enjoy helping
+        designers and companies bring their ideas into real life. I am looking
+        forward to continuing my developer career with a job in a junior web
+        developer position.<br /><br />If you think I’d be a good match for your
+        projects, contact me!
+      </p>
+      <a href="#contact"><button>Send a message</button></a>
+    </div>
   </div>
 </div>
+
+<!-- observeVisibility
+  [debounceTime]="100"
+  (visible)="onVisible('about-me')" -->
+
+<!-- 
+  appInView [class.d-none]="visibilityChange.view === 'VISIBLE'" -->

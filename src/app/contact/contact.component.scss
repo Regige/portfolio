@@ -2,20 +2,37 @@
 
 
 .contact-section {
-    padding: 0 112px 96px 112px;
 
-    h2 {
-        color: $cpt-color;
-        font-size: 90px;
-        line-height: 108px;
+
+    .section-sep-element {
+        display: flex;
+        align-items: center;
+        gap: 32px;
         margin-bottom: 24px;
+
+        .section-line {
+            width: 80px;
+            height: 4px;
+            background-color: $cpt-color;
+        }
+        
+        h2 {
+            color: $cpt-color;
+            font-size: 90px;
+            line-height: 108px;
+        }
     }
 
-        .contact-container {
+
+    .contact-container {
             display: flex;
             gap: 64px;
+            padding: 0 112px;
 
             .contact-text {
+                opacity: 0;
+                transition: all 1s ease-in-out;
+                transform: translateX(-54px);
                 width: 50%;
 
                 h4 {
@@ -33,16 +50,6 @@
 
                 span {
                     color: $cpt-color;
-
-                    a {
-                        font-weight: 800;
-                        color: $cpt-color;
-                        text-decoration: none;
-
-                        &:hover {
-                            cursor: pointer;
-                        }
-                    }
                 }
             }
 
@@ -51,6 +58,9 @@
                 flex-direction: column;
                 align-items: center;
                 gap: 48px;
+                opacity: 0;
+                transition: all 1s ease-in-out;
+                transform: translateX(54px);
                 width: 50%;
 
                 .contact-input-container {
@@ -60,47 +70,85 @@
                     gap: 32px;
                     width: 100%;
 
-                    .input-field {
+                    .input-field, textarea {
+                        background-color: transparent;
                         border: 1px solid $cpt-color;
                         border-radius: 10px;
+                        box-sizing: border-box;
                         padding: 15px 25px;
                         width: 100%;
                         
                         &::placeholder {
-                            color: black;
+                            color: white;
                             font-family: 'Montserrat';
                             font-size: 16px;
                             line-height: 19.2px;
                         }
-                    }
 
-                    textarea {
-                        border: 1px solid $cpt-color;
-                        border-radius: 10px;
-                        padding: 15px 25px;
-                        width: 100%;
-
-                        &::placeholder {
-                            color: black;
-                            font-family: 'Montserrat';
-                            font-size: 16px;
+                        &:hover {
+                            cursor: pointer;
+                            border: 1px solid $cpt-color-line;
                         }
                     }
 
                     .input-check-container {
                         .input-check {
+                            -webkit-appearance: none;
+                            appearance: none;
+                            background-color: transparent;
                             margin: 0 6px 0 0;
+                            width: 1em;
+                            height: 1em;
+                            border-radius: 0.15em;
+                            border: 1px solid $cpt-color;
+                            transform: translateY(0.075em);
+
+                            &:checked {
+                                box-shadow: inset 0px 0px 0px 3px $cpt-bg-color;
+                                background-color: $cpt-color;
+                            }
+
+                            &:hover {
+                                cursor: pointer;
+                            }
                         }
                         label {
                             font-size: 14px;
                             line-height: 16.8px;
+
+                            a {
+                                color: $cpt-color;
+                                position: relative;
+                                text-decoration: none;
+
+                                &:hover {
+                                    cursor: pointer;
+                                }
+                            }
+                            a::after {
+                                content: '';
+                                position: absolute;
+                                width: 80%;
+                                transform: scaleX(0);
+                                border-radius: 5px;
+                                height: 0.075em;
+                                bottom: 0;
+                                left: 10%;
+                                background: currentColor;
+                                transform-origin: bottom right;
+                                transition: transform 0.25s ease-out;
+                            }
+                            a:hover::after {
+                                transform: scaleX(1);
+                                transform-origin: bottom left;
+                            }
                         }
                     }
 
                 }
 
                 button {
-                    background-color: white;
+                    background-color: transparent;
                     border: 2px solid #BBBBBB;
                     border-radius: 10px;
                     color: #BBBBBB;
@@ -109,9 +157,26 @@
                     padding: 15px 30px;
 
                     &:hover {
+                        box-shadow: $cpt-box-shadow;
                         cursor: pointer;
                     }
                 }
             }
+    }
+
+    .cta-up-bt {
+        display: flex;
+        justify-content: end;
+        box-sizing: border-box;
+        padding: 64px 112px 80px 112px;
+        width: 100%;
+        
+        a {
+            transition: all 125ms ease-in-out;
+    
+            &:hover {
+                transform: scale(1.1);
+            }
         }
+    }
 }

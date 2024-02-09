@@ -1,15 +1,23 @@
-<div class="contact-section">
-  <h2 class="ft-baloo">Contact</h2>
+<div
+  class="contact-section"
+  appInView
+  (visibilityChange)="onVisibilityChange($event)"
+>
+  <div class="section-sep-element">
+    <div class="section-line"></div>
+    <h2 class="ft-baloo">Contact</h2>
+  </div>
+
   <div class="contact-container">
-    <div class="contact-text">
+    <div id="contact-text" class="contact-text">
       <h4>Got a problem to solve?</h4>
       <p>
         Contact me through this form, I am interested in hearing you, knowing
         your ideas and contributing to your projects with my work.
       </p>
-      <span>Need a Frontend developer? <a href="">Contact me!</a></span>
+      <span>Need a Frontend developer? <b>Contact me!</b></span>
     </div>
-    <div class="contact-input">
+    <div id="contact-input" class="contact-input">
       <div class="contact-input-container">
         <input
           type="text"
@@ -51,5 +59,8 @@
       </div>
       <button>Send message</button>
     </div>
+  </div>
+  <div class="cta-up-bt">
+    <a href="#start-section"><img src="assets/img/icon/go-up.svg" alt="" /></a>
   </div>
 </div>

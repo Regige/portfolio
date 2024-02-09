@@ -1,6 +1,13 @@
-<div class="skill-section">
-  <h2 class="ft-baloo">Skill set</h2>
-  <div class="skill-icon-container">
+<div
+  class="skill-section"
+  appInView
+  (visibilityChange)="onVisibilityChange($event)"
+>
+  <div class="section-sep-element">
+    <h2 class="ft-baloo">Skill set</h2>
+    <div class="section-line"></div>
+  </div>
+  <div id="skill-icon-container" class="skill-icon-container">
     <div>
       <img src="assets/img/icon/angular.svg" alt="" />
       <span>Angular</span>
@@ -43,3 +50,9 @@
     </div>
   </div>
 </div>
+
+<!-- appObserveElement
+  #intersection="intersection"
+  [class.d-none]="intersection._isIntersecting"
+  (isIntersecting)="isIntersecting($event)"
+  [isContinuous]="true" -->

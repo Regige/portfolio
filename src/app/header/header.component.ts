@@ -11,10 +11,13 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
 
   scrollTo(id:string) {
-    const section = document.getElementById(id);
+    let section = document.getElementById(id);
+    let a = document.getElementById(`${id}-link`);
 
     if (section) {
       section.scrollIntoView({ block: "center", inline: "center" });
+    } else if(a) {
+      a.setAttribute('href', `#${id}`);
     } else {
       console.error(`Element with ID '${id}' not found.`);
     }

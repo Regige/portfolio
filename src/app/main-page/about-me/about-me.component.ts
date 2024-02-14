@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 // import { ObserveVisibilityDirective } from '../observe-visibility.directive';
-import { InViewDirective } from '../in-view.directive';
-import { VisibilityState } from '../in-view.directive';
+import { InViewDirective } from '../../in-view.directive';
+import { VisibilityState } from '../../in-view.directive';
 
 @Component({
   selector: 'app-about-me',

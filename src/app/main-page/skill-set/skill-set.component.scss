@@ -1,7 +1,10 @@
-@import './../../styles.scss';
+@import './../../../styles.scss';
 
 
 .skill-section {
+    // background-image: url('./../../../assets/img/bg_colors/o_mid.svg');
+    // background-position: 15% 50%;
+    // background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     // align-items: center;
@@ -10,7 +13,15 @@
     // background-color: $cpt-color;
     // color: white;
     // height: 632px;
-    padding: 64px 0 112px 0;
+    padding: 64px 0;
+    overflow-x: hidden;
+
+    .skill-set-bg-color {
+        left: -100px;
+        position: absolute;
+        top: 1000px;
+        z-index: 1;
+    }
 
     .section-sep-element {
         display: flex;

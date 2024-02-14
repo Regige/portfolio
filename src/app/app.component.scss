@@ -1,20 +1,34 @@
+@import './../styles.scss';
+
 div {
     // padding-left: 112px;
     // padding-right: 112px;
+    display: flex;
+    flex-direction: column;
+    background-image: url('./../assets/img/bg_colors/c_mid.svg'), url('./../assets/img/bg_colors/c_big.svg'), url('./../assets/img/bg_colors/o_small.svg'), url('./../assets/img/bg_colors/c_mid_big.svg');
+    background-position: 150% 15%, 150% 40%, -20% 62%, -40% 105%;
+    background-repeat: no-repeat;
+    min-height: 100vh;
     width: 100vw;
-    background-image: url('./../assets/img/bg_colors/c_mid.svg'), url('./../assets/img/bg_colors/o_mid.svg'), url('./../assets/img/bg_colors/c_big.svg'), url('./../assets/img/bg_colors/o_small.svg'), url('./../assets/img/bg_colors/c_mid_big.svg');
-        background-position: 150% 15%, -30% 25%, 150% 40%, -20% 62%, -40% 105%;
-        background-repeat: no-repeat;
 
     app-header {
-        position: absolute;
+        // position: absolute;
+        position: fixed;
+        background-color: $cpt-bg-color;
+        z-index: 10;
         width: 100%;
     }
 
-
+    app-footer {
+        flex: none;
+    }
 }
 
 // .pad-sides {
 //     padding-left: 112px;
 //     padding-right: 112px;
 // }
+
+//  url('./../assets/img/bg_colors/o_mid.svg'),
+//  -30% 25%,
+//an zweiter Stelle

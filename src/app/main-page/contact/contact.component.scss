@@ -1,4 +1,18 @@
-@import './../../styles.scss';
+@import './../../../styles.scss';
+
+@mixin fontStyling() {
+    color: white;
+    font-family: 'Poppins';
+    font-size: 16px;
+}
+
+// @mixin inputInvalid() {
+//     border: 1px solid #E61C40;
+//     background-image: url('./../../../assets/img/icon/red-excl.svg');
+//     background-repeat: no-repeat;
+//     background-position: right 25px top 15px;
+//     @include fontStyling();
+// }
 
 
 .contact-section {
@@ -53,7 +67,7 @@
                 }
             }
 
-            .contact-input {
+            form {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -70,28 +84,75 @@
                     gap: 32px;
                     width: 100%;
 
-                    .input-field, textarea {
-                        background-color: transparent;
-                        border: 1px solid $cpt-color;
-                        border-radius: 10px;
-                        box-sizing: border-box;
-                        padding: 15px 25px;
+                    .input-div {
                         width: 100%;
-                        
-                        &::placeholder {
-                            color: white;
-                            font-family: 'Montserrat';
-                            font-size: 16px;
-                            line-height: 19.2px;
+                        position: relative;
+
+                        input[type=text], [type=email] {
+                            height: 57px;
                         }
 
-                        &:hover {
-                            cursor: pointer;
-                            border: 1px solid $cpt-color-line;
+                        textarea {
+                            display: block;
+                            height: 202px;
+                        }
+
+                        input[type=text], [type=email], textarea {
+                            background-color: transparent;
+                            border: 1px solid $cpt-color;
+                            border-radius: 10px;
+                            box-sizing: border-box;
+
+                            padding: 15px 25px;
+                            transition: 0.5s;
+                            width: 100%;
+                        
+                            &::placeholder {
+                                @include fontStyling();
+                            }
+                        
+                            &:hover {
+                                cursor: pointer;
+                                border: 1px solid $cpt-color-line;
+                            }
+
+                            &:focus {
+                                outline: none;
+                                border: 1px solid $cpt-color-line;
+                                background-color: transparent;
+                                @include fontStyling();
+                            }
+
+                            &:valid {
+                                border: 1px solid #70E61C;
+                                background-image: url('./../../../assets/img/icon/green-ckeck.svg');
+                                background-repeat: no-repeat;
+                                background-position: right 25px top 15px;
+                                @include fontStyling();
+                            }
+
+                        // &:invalid {
+                        //     border: 1px solid #E61C40;
+                        //     background-image: url('./../../../assets/img/icon/red-excl.svg');
+                        //     background-repeat: no-repeat;
+                        //     background-position: right 25px top 15px;
+                        //     @include fontStyling();
+                        // }
+
+                            &:autofill {
+                                @include fontStyling();
+                                background-color: transparent !important;
+                            }
+                            &:-webkit-autofill {
+                                @include fontStyling();
+                                background-color: transparent !important;
+                            }
                         }
                     }
 
                     .input-check-container {
+                        position: relative;
+
                         .input-check {
                             -webkit-appearance: none;
                             appearance: none;
@@ -112,6 +173,7 @@
                                 cursor: pointer;
                             }
                         }
+
                         label {
                             font-size: 14px;
                             line-height: 16.8px;
@@ -143,15 +205,24 @@
                                 transform-origin: bottom left;
                             }
                         }
+
+                        // .invalid-text-checkbox {
+                        //     position: absolute;
+                        //     left: 0;
+                        //     bottom: -20px;
+                        //     color: #E61C40;
+                        //     font-size: 13px;
+                        //     line-height: 16.8px;
+                        // }
                     }
 
                 }
 
-                button {
+                input[type=submit] {
                     background-color: transparent;
-                    border: 2px solid #BBBBBB;
+                    border: 2px solid #b4a494;
                     border-radius: 10px;
-                    color: #BBBBBB;
+                    color: #b4a494;
                     font-size: 23px;
                     line-height: 27.6px;
                     padding: 15px 30px;
@@ -179,4 +250,33 @@
             }
         }
     }
+}
+
+
+.invalid-text {
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    color: #E61C40;
+    font-size: 13px;
+    line-height: 16.8px;
+}
+
+.input-invalid {
+    border: 1px solid #E61C40;
+    background-image: url('./../../../assets/img/icon/red-excl.svg');
+    background-repeat: no-repeat;
+    background-position: right 25px top 15px;
+    @include fontStyling();
+}
+
+.btn-abled {
+    background-color: transparent;
+    border: 2px solid $cpt-color-line !important;
+    color: $cpt-color-line !important;
+                        
+    // &:hover {
+    //     box-shadow: $cpt-box-shadow;
+    //     cursor: pointer;
+    // }
 }

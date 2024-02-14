@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 // import { ObserveElementDirective } from '../observe-element.directive';
-import { InViewDirective } from '../in-view.directive';
-import { VisibilityState } from '../in-view.directive';
+import { InViewDirective } from '../../in-view.directive';
+import { VisibilityState } from '../../in-view.directive';
 
 @Component({
   selector: 'app-skill-set',

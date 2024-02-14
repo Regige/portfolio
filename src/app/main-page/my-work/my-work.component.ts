@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjectSampleComponent } from './project-sample/project-sample.component';
-import { InViewDirective } from '../in-view.directive';
-import { VisibilityState } from '../in-view.directive';
+import { InViewDirective } from '../../in-view.directive';
+import { VisibilityState } from '../../in-view.directive';
 
 
 @Component({

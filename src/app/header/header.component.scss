@@ -7,15 +7,16 @@ header {
     justify-content: space-between;
     height: 112px;
     padding: 0 112px;
-
+    
     .logo {
         text-align: center;
         text-decoration: none;
-        width: 104px;
+        width: 116px;
+        z-index: 1;
 
         span {
             color: white;
-            font-size: 28px;
+            font-size: 32px;
             transition: all ease-in-out 125ms;
 
             b {
@@ -23,7 +24,7 @@ header {
             }
 
             &:hover {
-                font-size: 30px;
+                font-size: 33px;
             }
         }
     }
@@ -42,6 +43,7 @@ header {
             text-decoration: none;
             transition: all ease-in-out 125ms ;
             text-align: center;
+            z-index: 1;
 
             &:hover {
                 cursor: pointer;

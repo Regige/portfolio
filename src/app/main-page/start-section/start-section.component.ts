@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { InViewDirective } from '../in-view.directive';
-import { VisibilityState } from '../in-view.directive';
+import { InViewDirective } from '../../in-view.directive';
+import { VisibilityState } from '../../in-view.directive';
 
 @Component({
   selector: 'app-start-section',

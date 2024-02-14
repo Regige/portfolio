@@ -1,4 +1,4 @@
-@import './../../styles.scss';
+@import './../../../styles.scss';
 
 
 .about-me-section {
@@ -12,9 +12,10 @@
         align-items: center;
 
         .section-line {
-            width: 80px;
-            height: 4px;
             background-color: $cpt-color;
+            height: 4px;
+            width: 80px;
+            z-index: 1;
         }
 
         .icon-container {

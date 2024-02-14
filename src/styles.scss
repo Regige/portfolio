@@ -20,19 +20,29 @@ body {
     // background-repeat: no-repeat;
     color: white;
     margin: 0;
-    height: 100vh;
     font-family: 'Poppins';
     // font-family: 'Montserrat';
+    // overflow: hidden;
 }
 
-body {
-    background-position: 5% top, bottom;
-}
+// body {
+//     background-position: 5% top, bottom;
+// }
 
 h2 {
     font-size: 48px;
     margin-top: 0;
     margin-bottom: 0;
+}
+
+app-imprint {
+    flex: auto;
+    padding: 112px;
+}
+
+app-privacy-police {
+    flex: auto;
+    padding: 112px;
 }
 
 .ft-baloo {

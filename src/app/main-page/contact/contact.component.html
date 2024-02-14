@@ -1,0 +1,103 @@
+<div
+  class="contact-section"
+  appInView
+  (visibilityChange)="onVisibilityChange($event)"
+>
+  <div class="section-sep-element">
+    <div class="section-line"></div>
+    <h2 class="ft-baloo">Contact</h2>
+  </div>
+
+  <div class="contact-container">
+    <div id="contact-text" class="contact-text">
+      <h4>Got a problem to solve?</h4>
+      <p>
+        Contact me through this form, I am interested in hearing you, knowing
+        your ideas and contributing to your projects with my work.
+      </p>
+      <span>Need a Frontend developer? <b>Contact me!</b></span>
+    </div>
+    <form
+      id="contact-input"
+      (ngSubmit)="onSubmit(contactForm)"
+      #contactForm="ngForm"
+    >
+      <div class="contact-input-container">
+        <div class="input-div">
+          <input
+            #name="ngModel"
+            [(ngModel)]="contactData.name"
+            type="text"
+            placeholder="Your name"
+            name="name"
+            id="input-name"
+            required
+            [class.input-invalid]="!name.valid && name.touched"
+          />
+          @if (!name.valid && name.touched) {
+          <span class="invalid-text">Your name is required</span>
+          }
+        </div>
+        <div class="input-div">
+          <input
+            #email="ngModel"
+            [(ngModel)]="contactData.email"
+            type="email"
+            placeholder="Your email"
+            name="email"
+            id="input-email"
+            required
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+            [class.input-invalid]="!email.valid && email.touched"
+          />
+          @if (!email.valid && email.touched) {
+          <span class="invalid-text">Your email is required</span>
+          }
+        </div>
+        <div class="input-div">
+          <textarea
+            #message="ngModel"
+            [(ngModel)]="contactData.message"
+            placeholder="Your message"
+            name="message"
+            id="input-message"
+            cols="30"
+            rows="10"
+            required
+            [class.input-invalid]="!message.valid && message.touched"
+          ></textarea>
+          @if (!message.valid && message.touched) {
+          <span class="invalid-text">Your message is empty</span>
+          }
+        </div>
+        <div class="input-check-container">
+          <input
+            #checkboxPrivacyPolice
+            type="checkbox"
+            name="checkbox-privacy-police"
+            id="privacy-police"
+            class="input-check"
+            required
+            (click)="inputChecked(checkboxPrivacyPolice)"
+          />
+          <label for="privacy-police"
+            >I've read the <a href="app-privacy-police">privacy police</a> and
+            agree to the processing of my data as outlined.</label
+          >
+          @if (!checkboxPrivacyPolice.checked && contactForm.submitted) {
+          <span class="invalid-text">Please accept the privacy policy</span>
+          }
+        </div>
+      </div>
+      <input
+        #contactBtn
+        type="submit"
+        value="Send message"
+        [class.btn-abled]="inputCheckboxState == true && contactForm.valid"
+      />
+    </form>
+  </div>
+  <div class="cta-up-bt">
+    <a href="#start-section"><img src="assets/img/icon/go-up.svg" alt="" /></a>
+  </div>
+</div>

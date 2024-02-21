@@ -17,10 +17,23 @@
     overflow-x: hidden;
 
     .skill-set-bg-color {
-        left: -100px;
+        left: -54px;
         position: absolute;
-        top: 1000px;
-        z-index: 1;
+        top: -300px;
+
+        @media (max-width: 1360px) {
+            width: 800px;
+            left: -88px;
+            top: -240px;
+        }
+        @media (max-width: 1160px) {
+            width: 750px;
+            left: -124px;
+            top: -280px;
+        }
+        @media (max-width: 992px) {
+
+        }
     }
 
     .section-sep-element {
@@ -28,11 +41,12 @@
         align-items: center;
         justify-content: end;
         gap: 32px;
+        z-index: 1;
         
         h2 {
             color: $cpt-color;
-            font-size: 96px;
-            line-height: 96px;
+            font-size: 90px;
+            line-height: 108px;
         }
         
         .section-line {
@@ -40,18 +54,53 @@
             height: 4px;
             background-color: $cpt-color;
         }
+
+        // @media (max-width: 1360px) {
+        //     h2 {
+        //         font-size: 72px;
+        //         line-height: 96px;
+        //         }
+        // }
+        @media (max-width: 1160px) {
+            h2 {
+                font-size: 82px;
+                line-height: 98px;
+            }
+        }
+        @media (max-width: 992px) {
+            gap: 16px;
+            h2 {
+                font-size: 72px;
+                line-height: 96px;
+                }
+            .section-line {
+                width: 64px;
+            }
+        }
+
+        @media (max-width: 760px) {
+            gap: 14px;
+            h2 {
+                font-size: 64px;
+                line-height: 72px;
+                }
+            .section-line {
+                width: 50px;
+            }
+        }
     }
 
     .skill-icon-container {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        width: 100%;
         padding: 0 112px;
         box-sizing: border-box;
         opacity: 0;
         transition: all 1s ease-in-out;
         transform: translateX(200px);
+        width: 100%;
+        max-width: 1600px;
 
         div {
             display: flex;
@@ -65,6 +114,10 @@
             margin-bottom: 40px;
             width: calc(20%);
             transition: all ease-in-out 125ms;
+
+            span {
+                text-align: center;
+            }
             
             &:hover {
                 transform: translateY(-10px);
@@ -85,6 +138,27 @@
             //     }
             // }
         }
+
+        @media (max-width: 992px) {
+            padding: 0 80px;
+        }
+
+        @media (max-width: 760px) {
+            padding: 0 64px;
+
+            div {
+                width: 25%;
+
+                img {
+                    width: 56px;
+                }
+            }
+
+        }
+    }
+
+    @media (max-width: 992px) {
+        padding: 24px 0;
     }
 }
 

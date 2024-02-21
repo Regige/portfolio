@@ -16,8 +16,35 @@
 
         h2 {
             color: $cpt-color;
-            font-size: 96px;
-            line-height: 96px;
+            font-size: 90px;
+            line-height: 108px;
+        }
+
+        @media (max-width: 1160px) {
+            h2 {
+                font-size: 82px;
+                line-height: 98px;
+            }
+        }
+        @media (max-width: 992px) {
+            gap: 16px;
+            h2 {
+                font-size: 72px;
+                line-height: 96px;
+                }
+            .section-line {
+                width: 64px;
+            }
+        }
+        @media (max-width: 760px) {
+            gap: 14px;
+            h2 {
+                font-size: 64px;
+                line-height: 72px;
+                }
+            .section-line {
+                width: 50px;
+            }
         }
     }
 
@@ -31,9 +58,20 @@
             line-height: 27.6px;
             width: 50%;
         }
-
+        
         div {
             width: 50%;
+        }
+        @media (max-width: 992px) {
+            gap: 48px;
+        }
+        @media (max-width: 760px) {
+            p {
+                width: 100%;
+            }
+            div {
+                width: auto;
+            }
         }
     }
 
@@ -43,12 +81,55 @@
         align-items: center;
         gap: 64px;
         padding: 64px 112px 64px 112px;
+
+        @media (max-width: 992px) {
+            padding: 40px 80px;
+        }
+
+        @media (max-width: 760px) {
+            padding: 64px;
+        }
+    }
+
+    @media (max-width: 1360px) {
+        .my-work-text {
+            p {
+                font-size: 20px;
+                line-height: 24.6px;
+            }
+        }
+    }
+
+    @media (max-width: 992px) {
+        .my-work-text {
+            padding: 0 80px;
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+
+    @media (max-width: 760px) {
+        padding: 0;
+        .my-work-text {
+            padding: 0 64px;
+        }
     }
 }
 
 app-project-sample {
     display: flex;
     gap: 64px;
+
+    @media (max-width: 992px) {
+        gap: 48px;
+    }
+
+    @media (max-width:760px) {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px;
+    }
 }
 
 .flex-row-reverse {

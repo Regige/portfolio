@@ -50,41 +50,124 @@ header {
                 font-weight: 700;
             }
         }
+
+        @media (max-width: 992px) {
+            gap: 24px;
+            width: 380px;
+        }
     }
 
+    .overlay-menu {
+        display: none;
+        
+        .menu-bar-element {
+            background-image: url('./../../assets/img/icon/menu_cross_1.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 26px;
+            width: 26px;
+        }
+
+        .overlay-menu-layer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            background-color: #c1b4a7d1;
+            height: calc(100vh - 80px);
+            position: absolute;
+            left: 0;
+            top: 80px;
+            transform: translateX(100vw);
+            transition: all 250ms ease-in-out;
+            width: 100vw;
+
+            
+            a {
+                cursor: pointer;
+                font-size: 28px;
+                font-weight: 500;
+                line-height: 29.6px;
+                color: $cpt-color;
+                text-decoration: none;
+                transition: all ease-in-out 125ms;
+                // text-align: center;
+                // z-index: 1;
+                
+                &:hover {
+                    cursor: pointer;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 992px) {
+        height: 80px;
+        padding: 0 80px;
+    }
+    
+    @media (max-width: 760px) {
+        padding: 0 64px;
+        
+        .header-links {
+            display: none;
+        }
+        .overlay-menu {
+            display: block;
+        }
+        
+    }
+}
+                    
+                    
+.open-overlay {
+    transform: translateX(0) !important;
+}
+
+.start-menu-bar-animation {
+    animation: menuBarChange 250ms ease forwards;
+}
 
 
-                // .header-links {
-                //     display: flex;
-                //     position: relative;
-                //     width: 420px;
-                //     // gap: 36px;
-        
-        
-                //     a {
-                //         cursor: pointer;
-                //         font-size: 23px;
-                //         line-height: 27.6px;
-                //         color: $cpt-color;
-                //         text-decoration: none;
-                //         transition: all ease-in-out 125ms;
-        
-                //         &:nth-child(2) {
-                //             position: absolute;
-                //             left: 50%;
-                //             transform: translateX(-50%);
-        
-                //         }
-        
-                //         &:last-child {
-                //             position: absolute;
-                //             right: 0;
-                //         }
-        
-                //         &:hover {
-                //             cursor: pointer;
-                //             font-weight: 700;
-                //         }
-                //     }
-                // }
+@keyframes menuBarChange {
+    0% {
+        background-image: url('./../../assets/img/icon/menu_cross_1.svg');
+    }
+
+    25% {
+        background-image: url('./../../assets/img/icon/menu_cross_2.svg');
+    }
+
+    50% {
+        background-image: url('./../../assets/img/icon/menu_cross_3.svg');
+    }
+
+    100% {
+        background-image: url('./../../assets/img/icon/menu_cross_4.svg');
+    }
+}
+
+
+.close-menu-bar-animation {
+    animation: menuBarChangeBack 250ms ease forwards;
+}
+
+@keyframes menuBarChangeBack {
+    0% {
+        background-image: url('./../../assets/img/icon/menu_cross_4.svg');
+    }
+
+    25% {
+        background-image: url('./../../assets/img/icon/menu_cross_3.svg');
+    }
+
+    50% {
+        background-image: url('./../../assets/img/icon/menu_cross_2.svg');
+    }
+
+    100% {
+        background-image: url('./../../assets/img/icon/menu_cross_1.svg');
+    }
 }

@@ -6,13 +6,35 @@
     font-size: 16px;
 }
 
-// @mixin inputInvalid() {
-//     border: 1px solid #E61C40;
-//     background-image: url('./../../../assets/img/icon/red-excl.svg');
-//     background-repeat: no-repeat;
-//     background-position: right 25px top 15px;
-//     @include fontStyling();
-// }
+
+.invalid-text {
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    color: #E61C40;
+    font-size: 13px;
+    line-height: 16.8px;
+}
+
+.input-invalid {
+    border: 1px solid #E61C40;
+    background-image: url('./../../../assets/img/icon/red-excl.svg');
+    background-repeat: no-repeat;
+    background-position: right 25px top 15px;
+    @include fontStyling();
+}
+
+.btn-abled {
+    background-color: transparent;
+    border: 2px solid $cpt-color-line !important;
+    color: $cpt-color-line !important;
+
+    // &:hover {
+    //     box-shadow: $cpt-box-shadow;
+    //     cursor: pointer;
+    // }
+}
+
 
 
 .contact-section {
@@ -35,12 +57,42 @@
             font-size: 90px;
             line-height: 108px;
         }
+
+        @media (max-width: 1160px) {
+            h2 {
+                font-size: 82px;
+                line-height: 98px;
+            }
+        }
+        @media (max-width: 992px) {
+            gap: 16px;
+            h2 {
+                font-size: 72px;
+                line-height: 96px;
+                }
+            .section-line {
+                width: 64px;
+            }
+        }
+        @media (max-width: 760px) {
+            gap: 14px;
+            h2 {
+                font-size: 64px;
+                line-height: 72px;
+                }
+            .section-line {
+                width: 50px;
+            }
+        }
     }
 
 
     .contact-container {
             display: flex;
+            justify-content: center;
             gap: 64px;
+            box-sizing: border-box;
+            max-width: 1600px;
             padding: 0 112px;
 
             .contact-text {
@@ -64,6 +116,13 @@
 
                 span {
                     color: $cpt-color;
+                }
+
+                @media (max-width: 992px) {
+                    h4 {
+                        font-size: 28px;
+                        line-height: 34.4px;
+                    }
                 }
             }
 
@@ -130,14 +189,6 @@
                                 background-position: right 25px top 15px;
                                 @include fontStyling();
                             }
-
-                        // &:invalid {
-                        //     border: 1px solid #E61C40;
-                        //     background-image: url('./../../../assets/img/icon/red-excl.svg');
-                        //     background-repeat: no-repeat;
-                        //     background-position: right 25px top 15px;
-                        //     @include fontStyling();
-                        // }
 
                             &:autofill {
                                 @include fontStyling();
@@ -231,8 +282,32 @@
                         box-shadow: $cpt-box-shadow;
                         cursor: pointer;
                     }
+
+                    @media (max-width: 992px) {
+                        font-size: 22px;
+                        padding: 12px 22px;
+                    }
                 }
             }
+
+        @media (max-width: 992px) {
+            gap: 48px;
+            padding: 0 80px;
+        }
+
+        @media (max-width: 760px) {
+            flex-direction: column;
+            padding: 0 64px;
+
+            .contact-text {
+                width: 100%;
+                transform: translateX(-32px);
+            }
+            form {
+                width: 100%;
+                transform: translateX(-80px);
+            }
+        }
     }
 
     .cta-up-bt {
@@ -249,34 +324,10 @@
                 transform: scale(1.1);
             }
         }
+
+        @media (max-width: 992px) {
+            padding: 64px 80px;
+        }
     }
 }
 
-
-.invalid-text {
-    position: absolute;
-    left: 0;
-    bottom: -20px;
-    color: #E61C40;
-    font-size: 13px;
-    line-height: 16.8px;
-}
-
-.input-invalid {
-    border: 1px solid #E61C40;
-    background-image: url('./../../../assets/img/icon/red-excl.svg');
-    background-repeat: no-repeat;
-    background-position: right 25px top 15px;
-    @include fontStyling();
-}
-
-.btn-abled {
-    background-color: transparent;
-    border: 2px solid $cpt-color-line !important;
-    color: $cpt-color-line !important;
-                        
-    // &:hover {
-    //     box-shadow: $cpt-box-shadow;
-    //     cursor: pointer;
-    // }
-}

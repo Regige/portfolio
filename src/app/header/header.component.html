@@ -8,4 +8,28 @@
     <a id="skill-set-link" (click)="scrollTo('skill-set')">Skill set</a>
     <a href="#my-work">My work</a>
   </div>
+  <div class="overlay-menu">
+    <div
+      id="menu-bar-element"
+      class="menu-bar-element"
+      (click)="toggleMenu()"
+      [ngClass]="{
+        'start-menu-bar-animation': overlayMenuOpen,
+        'close-menu-bar-animation': !overlayMenuOpen
+      }"
+    ></div>
+    <div
+      class="overlay-menu-layer"
+      [ngClass]="{ 'open-overlay': overlayMenuOpen }"
+    >
+      <a id="about-me-link" (click)="scrollTo('about-me'); toggleMenu()"
+        >About me</a
+      >
+      <a id="skill-set-link" (click)="scrollTo('skill-set'); toggleMenu()"
+        >Skill set</a
+      >
+      <a href="#my-work" (click)="toggleMenu()">My work</a>
+      <a href="#contact" (click)="toggleMenu()">Contact</a>
+    </div>
+  </div>
 </header>

@@ -1,12 +1,11 @@
 @import './../styles.scss';
 
 div {
-    // padding-left: 112px;
-    // padding-right: 112px;
     display: flex;
     flex-direction: column;
-    background-image: url('./../assets/img/bg_colors/c_mid.svg'), url('./../assets/img/bg_colors/c_big.svg'), url('./../assets/img/bg_colors/o_small.svg'), url('./../assets/img/bg_colors/c_mid_big.svg');
-    background-position: 150% 15%, 150% 40%, -20% 62%, -40% 105%;
+    background-image: url('./../assets/img/bg_colors/c_big.svg'), url('./../assets/img/bg_colors/o_small.svg'), url('./../assets/img/bg_colors/c_mid_big.svg');
+    background-position: 150% 40%, -20% 62%, -40% 105%;
+    background-size: 55%, 60%, 60%;
     background-repeat: no-repeat;
     min-height: 100vh;
     width: 100vw;
@@ -22,13 +21,22 @@ div {
     app-footer {
         flex: none;
     }
+
+    @media (max-width: 1160px) {
+        background-position: 150% 40%, -20% 62%, -40% 100%;
+    }
+
+    @media (max-width:992px) {
+        background-position: 150% 35%, -20% 62%, -40% 105%;
+    }
 }
 
-// .pad-sides {
-//     padding-left: 112px;
-//     padding-right: 112px;
-// }
+
 
 //  url('./../assets/img/bg_colors/o_mid.svg'),
 //  -30% 25%,
 //an zweiter Stelle
+
+// url('./../assets/img/bg_colors/c_mid.svg'),
+// 
+// an dritter Stelle

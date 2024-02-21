@@ -14,6 +14,22 @@
 //     }
 // }
 
+.align-end {
+    align-items: end !important;
+    transform: translateX(-32px);
+}
+
+.just-con-start {
+    justify-content: start !important;
+    transform: translateX(32px);
+}
+
+.text-al-right {
+    text-align: right !important;
+}
+
+
+
 .project-img {
     display: flex;
     justify-content: end;
@@ -34,14 +50,34 @@
         max-width: 620px;
         width: 100%;
         object-fit: cover;
-        // width: 50%;
         transition: all ease-in-out 125ms;
 
         &:hover {
             cursor: pointer;
             transform: scale(1.05) translateY(-32px);
         }
+
+        @media (max-width: 1360px) {
+            height: 352px;
+        }
+
+        @media (max-width: 1160px) {
+            height: 278px;
+        }
+
+        @media (max-width: 992px) {
+            object-fit: contain;
+            height: auto;
+        }
     }
+
+    @media (max-width:992px) {
+        display: block;
+    }
+    @media (max-width:760px) {
+        width: auto;
+    }
+
 }
 
 
@@ -64,7 +100,7 @@
 
     h4 {
         font-size: 24px;
-           font-weight: 400;
+        font-weight: 400;
         line-height: 27.6px;
         margin: 16px 0;    
     }
@@ -87,19 +123,42 @@
             box-shadow: $cpt-box-shadow;
         }
     }
+
+    @media (max-width: 1160px) {
+        h3 {
+            font-size: 40px;
+            line-height: 44px;
+        }
+        h4 {
+            margin: 8px 0;
+            line-height: 24.6px;
+        }
+    }
+
+    @media (max-width: 992px) {
+        h3 {
+            font-size: 38px;
+            line-height: 40px;
+        }
+        h4 {
+            margin: 0;
+            font-size: 18px;
+        }
+        button {
+            font-size: 22px;
+            padding: 12px 22px;
+        }
+    }
+
+    @media (max-width:760px) {
+        width: auto;
+        align-items: start !important;
+        transform: translateX(-80px);
+
+        p{
+            text-align: start !important;
+        }
+    }
 }
 
 
-.align-end {
-    align-items: end !important;
-    transform: translateX(-32px);
-}
-
-.just-con-start {
-    justify-content: start !important;
-    transform: translateX(32px);
-}
-
-.text-al-right {
-    text-align: right !important;
-}

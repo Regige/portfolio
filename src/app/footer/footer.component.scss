@@ -55,6 +55,10 @@
                 cursor: pointer;
                 font-weight: 500;
             }
+
+            @media (max-width: 760px) {
+                top: 124px;
+            }
         }
         a::after {
             content: '';
@@ -90,5 +94,19 @@
                 transform: scale(1.2);
             }
         }
+        @media (max-width: 760px) {
+            padding: 10px 0 0 0;
+        }
+    }
+
+    @media (max-width: 992px) {
+        padding: 0 80px;
+    }
+
+    @media (max-width: 760px) {
+        flex-direction: column;
+        gap: 30px;
+        height: auto;
+        padding: 24px 64px 88px 64px;
     }
 }

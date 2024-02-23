@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,9 +10,30 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.scss'
 })
 
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
 
+  isImprintPage: boolean = false;
   overlayMenuOpen = false;
+
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    //   this.route.url.subscribe(urlSegments => {
+    //   console.log(urlSegments);
+    //   this.isImprintPage = urlSegments.some(segment => segment.path === 'imprint');
+    //   console.log('Is imprint page:', this.isImprintPage);
+    // });
+
+    // this.route.url.subscribe(urlSegments => {
+    //   this.isImprintPage = this.route.snapshot.url.join('/').includes('imprint');
+    // });
+
+    // this.isImprintPage = this.route.snapshot.url.join('/').includes('imprint');
+
+    // this.isImprintPage = this.route.snapshot.url.toString().includes('imprint');
+
+    this.isImprintPage = window.location.href.includes('imprint');
+  }
 
   scrollTo(id:string) {
     let section = document.getElementById(id);
@@ -31,6 +53,6 @@ export class HeaderComponent {
 
     this.overlayMenuOpen = !this.overlayMenuOpen;
 
-    // transform: translateX(0) !important;
+    document.getElementById('menu-bar-element')
   }
 }

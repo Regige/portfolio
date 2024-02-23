@@ -9,6 +9,13 @@ $cpt-bg-color: #c1b4a7;
 // $cpt-bg-color: #141D2F;
 $cpt-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
 
+html {
+    overflow-x: hidden;
+    // overflow-y: scroll;
+    // overflow-y: overlay;
+    // scrollbar-gutter: stable;
+}
+
 * {
     scroll-behavior: smooth;
 }
@@ -23,6 +30,7 @@ body {
     font-family: 'Poppins';
     // font-family: 'Montserrat';
     overflow-x: hidden;
+    // overflow-y: scroll;
 }
 
 h2 {
@@ -50,6 +58,57 @@ app-privacy-police {
     opacity: 1 !important;
     transform: translateX(0) !important;
 }
+
+
+
+
+// Scrollbar Styling
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+
+// ::-webkit-scrollbar {
+//     width: 12px;
+//     /* Breite der Scrollleiste */
+//     position: absolute;
+//     /* Positioniere die Scrollleiste */
+//     right: 0;
+//     /* Platziere die Scrollleiste am rechten Rand */
+//     z-index: 9999;
+//     /* Stelle sicher, dass die Scrollleiste über anderen Inhalten liegt */
+// }
+
+// ::-webkit-scrollbar-track {
+//     position: absolute;
+//     // display: none;
+//     // background: transparent;
+//     /* Hintergrundfarbe der Scrollleiste */
+// }
+
+// ::-webkit-scrollbar-thumb {
+//     background-color: $cpt-color;
+//     /* Farbe des Scrollbalkens */
+//     border-radius: 6px;
+//     /* Radius der abgerundeten Ecken */
+//     border: 3px solid transparent;
+//     /* Rand um den Scrollbalken */
+// }
+
+// ::-webkit-scrollbar-thumb:hover {
+//     background-color: #a0a0a0;
+//     /* Farbe des Scrollbalkens beim Hovern */
+// }
 
 
 

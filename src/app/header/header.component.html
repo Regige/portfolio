@@ -1,14 +1,13 @@
 <header>
-  <!-- <img src="assets/img/logo.svg" alt="" /> -->
   <a class="logo" href="#start-section"
     ><span><b>R</b>egina</span></a
   >
-  <div class="header-links">
+  <div class="header-links" [class.d-none]="isImprintPage">
     <a id="about-me-link" (click)="scrollTo('about-me')">About me</a>
     <a id="skill-set-link" (click)="scrollTo('skill-set')">Skill set</a>
     <a href="#my-work">My work</a>
   </div>
-  <div class="overlay-menu">
+  <div class="overlay-menu" [class.d-none]="isImprintPage">
     <div
       id="menu-bar-element"
       class="menu-bar-element"
@@ -33,3 +32,5 @@
     </div>
   </div>
 </header>
+
+<!-- [ngClass]="{ 'd-none': isImprintPage }" -->

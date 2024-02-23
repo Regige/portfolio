@@ -117,10 +117,20 @@ header {
         .overlay-menu {
             display: block;
         }
-        
+    }
+
+    @media (max-width: 532px) {
+        padding: 0 40px;
+    }
+
+    @media (max-width: 412px) {
+        padding: 0 28px;
     }
 }
-                    
+     
+.d-none {
+    display: none !important;
+}
                     
 .open-overlay {
     transform: translateX(0) !important;

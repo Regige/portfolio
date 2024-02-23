@@ -159,6 +159,27 @@
             text-align: start !important;
         }
     }
+
+    @media (max-width: 412px) {
+        button {
+            font-size: 20px;
+        }
+    }
 }
+
+
+// .align-end {
+//     align-items: end !important;
+//     transform: translateX(-32px);
+// }
+
+// .just-con-start {
+//     justify-content: start !important;
+//     transform: translateX(32px);
+// }
+
+// .text-al-right {
+//     text-align: right !important;
+// }
 
 

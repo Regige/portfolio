@@ -21,6 +21,10 @@
         @media (max-width: 992px) {
             width: 600px;
         }
+
+        @media (max-width: 760px) {
+            top: 64px;
+        }
     }
 
 
@@ -72,6 +76,12 @@
             gap: 14px;
             .section-line {
                 width: 50px;
+            }
+        }
+
+        @media (max-width: 532px) {
+            .section-line {
+                width: 40px;
             }
         }
     }
@@ -185,6 +195,38 @@
             }
             .about-me-text {
                 width: 100%;
+            }
+        }
+
+        @media (max-width: 532px) {
+            gap: 32px;
+            padding: 40px;
+
+            h2 {
+                font-size: 48px;
+                line-height: 56px;
+            }
+        }
+
+        @media (max-width: 412px) {
+            gap: 24px;
+            padding: 28px;
+
+            h2 {
+                font-size: 40px;
+                line-height: 44px;
+            }
+            .about-me-text {
+                gap: 30px;
+                p {
+                    font-size: 16px;
+                    line-height: 22.6px;
+                }
+                a {
+                    button {
+                        font-size: 20px;
+                    }
+                }
             }
         }
     }

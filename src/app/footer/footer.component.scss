@@ -17,7 +17,9 @@
 
         span {
             color: white;
+            display: block;
             font-size: 32px;
+            height: 50px;
             transition: all ease-in-out 125ms;
     
             b {
@@ -38,6 +40,11 @@
             margin: 0;
             font-size: 24px;
             line-height: 27.6px;
+
+            @media (max-width: 412px) {
+                font-size: 16px;
+                line-height: 20.6px;
+            }
         }
 
         a {
@@ -58,6 +65,9 @@
 
             @media (max-width: 760px) {
                 top: 124px;
+            }
+            @media (max-width: 412px) {
+                top: 116px;
             }
         }
         a::after {
@@ -108,5 +118,14 @@
         gap: 30px;
         height: auto;
         padding: 24px 64px 88px 64px;
+    }
+
+    @media (max-width: 532px) {
+        padding: 24px 40px 88px 40px;
+    }
+
+    @media (max-width: 412px) {
+        gap: 24px;
+        padding: 24px 28px 88px 28px;
     }
 }

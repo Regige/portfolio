@@ -39,7 +39,6 @@
 
 .contact-section {
 
-
     .section-sep-element {
         display: flex;
         align-items: center;
@@ -84,18 +83,38 @@
                 width: 50px;
             }
         }
+        @media (max-width: 532px) {
+            gap: 10px;
+            h2 {
+                font-size: 56px;
+                line-height: 64px;
+            }
+            .section-line {
+                width: 30px;
+            }
+        }
+        @media (max-width: 412px) {
+            gap: 8px;
+            margin-bottom: 14px;
+            h2 {
+                font-size: 48px;
+                line-height: 48px;
+            }
+            .section-line {
+                width: 20px;
+            }
+        }
     }
 
-
     .contact-container {
-            display: flex;
-            justify-content: center;
-            gap: 64px;
-            box-sizing: border-box;
-            max-width: 1600px;
-            padding: 0 112px;
+        display: flex;
+        justify-content: center;
+        gap: 64px;
+        box-sizing: border-box;
+        max-width: 1600px;
+        padding: 0 112px;
 
-            .contact-text {
+        .contact-text {
                 opacity: 0;
                 transition: all 1s ease-in-out;
                 transform: translateX(-54px);
@@ -124,9 +143,22 @@
                         line-height: 34.4px;
                     }
                 }
-            }
 
-            form {
+                @media (max-width: 532) {
+                    h4 {
+                        font-size: 24px;
+                        line-height: 26.4px;
+                    }
+                }
+                
+                @media (max-width: 412px) {
+                    h4 {
+                        font-size: 20px;
+                    }
+                }
+        }
+
+        form {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -161,7 +193,6 @@
                             border: 1px solid $cpt-color;
                             border-radius: 10px;
                             box-sizing: border-box;
-
                             padding: 15px 25px;
                             transition: 0.5s;
                             width: 100%;
@@ -197,6 +228,10 @@
                             &:-webkit-autofill {
                                 @include fontStyling();
                                 background-color: transparent !important;
+                            }
+
+                            @media (max-width: 412px) {
+                                padding: 10px 14px;
                             }
                         }
                     }
@@ -256,15 +291,6 @@
                                 transform-origin: bottom left;
                             }
                         }
-
-                        // .invalid-text-checkbox {
-                        //     position: absolute;
-                        //     left: 0;
-                        //     bottom: -20px;
-                        //     color: #E61C40;
-                        //     font-size: 13px;
-                        //     line-height: 16.8px;
-                        // }
                     }
 
                 }
@@ -287,8 +313,12 @@
                         font-size: 22px;
                         padding: 12px 22px;
                     }
+
+                    @media (max-width: 412px) {
+                        font-size: 20px;
+                    }
                 }
-            }
+        }
 
         @media (max-width: 992px) {
             gap: 48px;
@@ -307,6 +337,23 @@
                 width: 100%;
                 transform: translateX(-80px);
             }
+        }
+
+        @media (max-width: 532px) {
+            gap: 32px;
+            padding: 0 40px;
+
+            form {
+                gap: 40px;
+
+                .contact-input-container {
+                    gap: 24px
+                }
+            }
+        }
+
+        @media (max-width: 412px) {
+            padding: 0 28px;
         }
     }
 
@@ -327,6 +374,14 @@
 
         @media (max-width: 992px) {
             padding: 64px 80px;
+        }
+
+        @media (max-width: 760px) {
+            padding: 64px;
+        }
+
+        @media (max-width: 532px) {
+            padding: 40px;
         }
     }
 }

@@ -51,6 +51,26 @@
                 width: 250px;
             }
         }
+
+        @media (max-width: 760px) {
+            .profil-bg-color {
+                left: -220px;
+                top: -24px;
+                width: 640px;
+            }
+            .profil-img {
+                padding-top: 24px;
+                width: 240px;
+            }
+        }
+
+        @media (max-width: 532px) {
+            .profil-bg-color {
+                left: -186px;
+                top: -32px;
+                width: 550px;
+            }
+        }
     }
 
     .start-screen-bg-element {
@@ -60,6 +80,14 @@
 
         @media (max-width: 992px) {
             top: 390px;
+        }
+
+        @media (max-width: 760px) {
+            top: 344px;
+        }
+
+        @media (max-width: 632px) {
+            top: 368px;
         }
     }
     
@@ -149,6 +177,28 @@
                 left: -64px;
             }
         }
+
+        @media (max-width: 760px) {
+            position: absolute;
+            top: 444px;
+        }
+
+        @media (max-width: 412px) {
+            margin-left: 18px;
+            h1 {
+                font-size: 31px;
+                line-height: 44px;
+            }
+            h2 {
+                font-size: 20px;
+                line-height: 23.6px;
+            }
+            h3 {
+                top: 37px;
+                font-size: 24px;
+                left: -50px;
+            }
+        } 
     }
 
     .cta-text {
@@ -177,6 +227,10 @@
         @media (max-width: 760px) {
             right: 16px;
         }
+
+        @media (max-width: 532px) {
+            display: none;
+        }
     }
 
     @media (max-width: 1160px) {
@@ -191,7 +245,17 @@
     @media (max-width: 760px) {
         padding: 0 64px;
     }
+
+    @media (max-width: 532px) {
+        padding: 0 40px;
+    }
+
+    @media (max-width: 412px) {
+        padding: 0 28px;
+    }
 }
+
+
 
 .bounceAnimation {
     animation: bounce 2s ease infinite;

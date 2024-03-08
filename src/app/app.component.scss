@@ -22,24 +22,39 @@ div {
         flex: none;
     }
 
+    
     @media (max-width: 1160px) {
         background-position: 150% 40%, -20% 62%, -40% 100%;
     }
-
+    
     @media (max-width:992px) {
         background-position: 150% 41%, -40% 62%, -56% 98%;
+    }
+
+    @media (min-width: 1681px) {
+        background-size: 50%, 55%, 55%;
+        background-position: 150% 43%, -20% 62%, -40% 105%;
+    }
+
+    @media (min-width: 1921px) {
+        background-position: 150% 43%, -28% 62%, -40% 108%;
+    }
+
+    @media (min-width: 2100px) {
+        background-position: 150% 46%, -28% 62%, -40% 111%;
+    }
+
+    @media (min-width: 2561px) {
+        background-position: 162% 49%, -38% 62%, -40% 120%;
+    }
+
+    @media (min-width: 3000px) {
+        background-size: 50%, 50%, 50%;
+        background-position: 162% 53%, -38% 66%, -35% 123%;
     }
 }
 
 
-
-//  url('./../assets/img/bg_colors/o_mid.svg'),
-//  -30% 25%,
-//an zweiter Stelle
-
-// url('./../assets/img/bg_colors/c_mid.svg'),
-// 
-// an dritter Stelle
 
 
 

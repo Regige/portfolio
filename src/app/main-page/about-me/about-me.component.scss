@@ -4,11 +4,25 @@
 .start-screen-bg-element {
     width: 100vw;
     position: absolute;
-    // top: 464px;
-    top: -280px;
+
+    @media (min-width: 3441px) {
+        width: 0;
+    }
+
+    @media (max-width: 3440px) {
+        top: -620px;
+    }
+
+    @media (max-width: 2560px) {
+        top: -390px;
+    }
+
+    @media (max-width: 2080px) {
+        top: -324px;
+    }
 
     @media (max-width: 1920px) {
-        // top: 494px;
+        top: -416px;
     }
 
     @media (max-width: 1680px) {
@@ -25,22 +39,26 @@
     }
 
     @media (max-width: 760px) {
-        top: -198px;
+        top: -218px;
     }
 
-    @media (max-width: 600px) {
-        top: -178px;
+    @media (max-width: 616px) {
+        top: -200px;
     }
 
     @media (max-width: 532px) {
-        // top: 318px;
+        top: -216px;
     }
 
     @media (max-width: 412px) {
-        top: -148px;
+        top: -194px;
     }
 
     // height and width
+
+    @media (min-height: 1300px) and (max-width: 2560px) and (min-width: 1921px) {
+        top: -490px;
+    }
 
     @media (max-height: 848px) and (max-width: 1680px) and (min-width: 1369px) {
         top: -262px;

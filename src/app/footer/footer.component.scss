@@ -5,7 +5,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px -4px 0px 0px #FA7902;
+    // box-shadow: 0px -4px 0px 0px #FA7902;
+    box-shadow: 0px -4px 0px 0px $cpt-color;
     background-color: $cpt-bg-color;
     height: 240px;
     padding: 0 112px;

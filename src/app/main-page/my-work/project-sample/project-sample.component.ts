@@ -14,6 +14,7 @@ export class ProjectSampleComponent {
   @Input() image:string = '';
   @Input() tools:string = '';
   @Input() description:string = '';
+  @Input() link:string = '';
   @Input() github:string = '';
   @Input() showReverse:boolean = false;
   @Input() i:number = 0;

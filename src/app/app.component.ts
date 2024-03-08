@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet} from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { FooterComponent } from './footer/footer.component';
 import { ImprintComponent } from './imprint/imprint.component';
+
 
 @Component({
   selector: 'app-root',
@@ -15,4 +16,10 @@ import { ImprintComponent } from './imprint/imprint.component';
 })
 export class AppComponent {
   title = 'portfolio';
+
+  constructor() {}
+
+  onActivate(_event: any): void {
+    window.scroll(0,0);
+  }
 }

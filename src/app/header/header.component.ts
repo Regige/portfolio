@@ -1,39 +1,47 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { PathService } from '../path.service';
+import { RouterModule } from '@angular/router';
+
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 
 export class HeaderComponent implements OnInit {
 
-  isImprintPage: boolean = false;
   overlayMenuOpen = false;
+  mainPageDisplayed: boolean = true;
 
-  constructor(private route: ActivatedRoute) {}
+  private pathSubscription?: Subscription;
+
+  constructor(private pathService: PathService) {}
 
   ngOnInit(): void {
-    //   this.route.url.subscribe(urlSegments => {
-    //   console.log(urlSegments);
-    //   this.isImprintPage = urlSegments.some(segment => segment.path === 'imprint');
-    //   console.log('Is imprint page:', this.isImprintPage);
-    // });
-
-    // this.route.url.subscribe(urlSegments => {
-    //   this.isImprintPage = this.route.snapshot.url.join('/').includes('imprint');
-    // });
-
-    // this.isImprintPage = this.route.snapshot.url.join('/').includes('imprint');
-
-    // this.isImprintPage = this.route.snapshot.url.toString().includes('imprint');
-
-    this.isImprintPage = window.location.href.includes('imprint');
+      this.pathSubscription = this.pathService.currentPath$.subscribe((currentPath: string) => {
+      this.updateDisplay(currentPath);
+    });
   }
+
+  ngOnDestroy(): void {
+    if (this.pathSubscription) {
+      this.pathSubscription.unsubscribe();
+    }
+  }
+
+  updateDisplay(currentPath: string) {
+    if (currentPath === 'imprint' || currentPath === 'privacy-police') {
+      this.mainPageDisplayed = false;
+    } else {
+      this.mainPageDisplayed = true;
+    }
+  }
+
 
   scrollTo(id:string) {
     let section = document.getElementById(id);

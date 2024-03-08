@@ -1,11 +1,8 @@
 .imprint {
-    position: relative;
-
-    .go-back-btn {
-        position: absolute;
-        right: 0;
-        transform: rotate(270deg);
-        top: 0;
-
+    a {
+        color: white;
+        text-decoration-thickness: 1px;
+        text-underline-position: under;
     }
+
 }

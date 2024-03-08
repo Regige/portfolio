@@ -26,24 +26,31 @@
 
 .btn-abled {
     background-color: transparent;
-    border: 2px solid $cpt-color-line !important;
-    color: $cpt-color-line !important;
+    border: 2px solid $cpt-color !important;
+    color: $cpt-color !important;
+    transition: all ease-in-out 125ms;
 
-    // &:hover {
-    //     box-shadow: $cpt-box-shadow;
-    //     cursor: pointer;
-    // }
+    &:hover {
+        border: 2px solid $cpt-color-line !important;
+        color: $cpt-color-line !important;
+        cursor: pointer;
+        transform: scale(1.05);
+    }
 }
 
 
 
 .contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .section-sep-element {
         display: flex;
         align-items: center;
         gap: 32px;
         margin-bottom: 24px;
+        width: 100%;
 
         .section-line {
             width: 80px;
@@ -223,11 +230,13 @@
 
                             &:autofill {
                                 @include fontStyling();
-                                background-color: transparent !important;
+                                -webkit-text-fill-color: white;
+                                box-shadow: 0 0 0px 40rem $cpt-bg-color inset;
                             }
                             &:-webkit-autofill {
                                 @include fontStyling();
-                                background-color: transparent !important;
+                                -webkit-text-fill-color: white;
+                                -webkit-box-shadow: 0 0 0px 40rem $cpt-bg-color inset;
                             }
 
                             @media (max-width: 412px) {
@@ -305,7 +314,7 @@
                     padding: 15px 30px;
 
                     &:hover {
-                        box-shadow: $cpt-box-shadow;
+                        // box-shadow: $cpt-box-shadow;
                         cursor: pointer;
                     }
 

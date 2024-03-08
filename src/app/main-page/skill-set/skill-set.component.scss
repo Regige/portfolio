@@ -3,6 +3,7 @@
 
 .skill-section {
     display: flex;
+    align-items: center;
     flex-direction: column;
     gap: 64px;
     padding: 64px 0;
@@ -13,7 +14,7 @@
         position: absolute;
         top: -300px;
 
-        @media (max-width: 1360px) {
+        @media (max-width: 1368px) {
             width: 800px;
             left: -88px;
             top: -240px;
@@ -40,6 +41,7 @@
         align-items: center;
         justify-content: end;
         gap: 32px;
+        width: 100%;
         z-index: 1;
         
         h2 {

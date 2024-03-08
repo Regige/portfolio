@@ -38,21 +38,59 @@ h2 {
 }
 
 
+app-about-me {
+    position: relative;
+}
 
 app-imprint {
     flex: auto;
     padding: 112px;
+
+    @media (max-width: 992px) {
+        padding: 80px;
+    }
+        
+    @media (max-width: 760px) {
+        padding: 80px 64px 64px 64px;
+    }
+        
+    @media (max-width: 532px) {
+        padding: 80px 40px 40px 40px;
+    }
+        
+    @media (max-width: 412px) {
+        padding: 80px 28px 28px 28px;
+    }
 }
 
 app-privacy-police {
     flex: auto;
     padding: 112px;
+
+    @media (max-width: 992px) {
+        padding: 80px;
+    }
+
+    @media (max-width: 760px) {
+        padding: 80px 64px 64px 64px;
+    }
+
+    @media (max-width: 532px) {
+        padding: 80px 40px 40px 40px;
+    }
+
+    @media (max-width: 412px) {
+        padding: 80px 28px 28px 28px;
+    }
 }
+
 
 .ft-baloo {
     // font-family: 'Baloo 2'; // noch mal schauen ob das wirklich die beste Lösung ist
     font-family: 'Poppins';
 }
+
+
 
 .show {
     opacity: 1 !important;

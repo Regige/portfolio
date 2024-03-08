@@ -4,9 +4,7 @@
   >
   <div class="footer-impressum">
     <p>© Regina Gering 2024</p>
-    <a href="imprint">Imprint</a>
-    <!-- <a (click)="openDialog()">Imprint</a> -->
-    <!-- <button (click)="openImprintDialog()" data-open-modal>Imprint</button> -->
+    <a [routerLink]="['imprint']">Imprint</a>
   </div>
   <div class="icon-container">
     <a href="https://github.com/" target="_blank"
@@ -17,8 +15,4 @@
       ><img src="assets/img/icon/linkedin_w.svg" alt=""
     /></a>
   </div>
-  <!-- <dialog data-modal open>
-    <div>This is a modal</div>
-    <button data-close-modal>Close</button>
-  </dialog> -->
 </div>

@@ -17,6 +17,7 @@ header {
         span {
             color: white;
             font-size: 32px;
+            line-height: 24px;
             transition: all ease-in-out 125ms;
 
             b {
@@ -102,6 +103,11 @@ header {
             }
         }
     }
+
+    .go-back-btn {
+        display: none;
+        transform: rotate(270deg);
+    }
     
     @media (max-width: 992px) {
         height: 80px;
@@ -121,12 +127,19 @@ header {
 
     @media (max-width: 532px) {
         padding: 0 40px;
+
+        .go-back-btn {
+            img {
+                width: 32px;
+            }
+        }
     }
 
     @media (max-width: 412px) {
         padding: 0 28px;
     }
 }
+
      
 .d-none {
     display: none !important;
@@ -136,10 +149,15 @@ header {
     transform: translateX(0) !important;
 }
 
+.display {
+    display: flex !important;
+}
+
+
+
 .start-menu-bar-animation {
     animation: menuBarChange 250ms ease forwards;
 }
-
 
 @keyframes menuBarChange {
     0% {

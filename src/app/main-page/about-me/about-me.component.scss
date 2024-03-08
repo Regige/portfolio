@@ -1,16 +1,87 @@
 @import './../../../styles.scss';
 
 
+.start-screen-bg-element {
+    width: 100vw;
+    position: absolute;
+    // top: 464px;
+    top: -280px;
+
+    @media (max-width: 1920px) {
+        // top: 494px;
+    }
+
+    @media (max-width: 1680px) {
+        // top: 468px;
+        top: -304px;
+    }
+
+    @media (max-width: 1160px) {
+        top: -238px;
+    }
+
+    @media (max-width: 992px) {
+        top: -278px;
+    }
+
+    @media (max-width: 760px) {
+        top: -198px;
+    }
+
+    @media (max-width: 600px) {
+        top: -178px;
+    }
+
+    @media (max-width: 532px) {
+        // top: 318px;
+    }
+
+    @media (max-width: 412px) {
+        top: -148px;
+    }
+
+    // height and width
+
+    @media (max-height: 848px) and (max-width: 1680px) and (min-width: 1369px) {
+        top: -262px;
+    }
+
+    @media (max-height: 808px) and (max-width: 1510px) and (min-width: 1369px) {
+        top: -210px;
+    }
+
+    @media (max-height: 824px) and (max-width: 1368px) and (min-width: 1161px) {
+        top: -244px;
+    }
+
+    @media (max-height: 744px) and (max-width: 1160px) and (min-width: 993px) {
+        top: -192px;
+    }
+
+    @media (max-height: 740px) and (max-width: 992px) and (min-width: 761px) {
+        top: -228px;
+    }
+
+    @media (max-height: 640px) and (max-width: 992px) and (min-width: 761px) {
+        top: -178px;
+    }
+
+    @media (max-height: 560px) and (max-width: 992px) and (min-width: 761px) {
+        top: -138px;
+    }
+}
+
 .about-me-section {
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     .about-me-bg-color {
         right: -400px;
         position: absolute;
         top: -100px;
 
-        @media (max-width: 1360px) {
+        @media (max-width: 1368px) {
             width: 700px;
         }
 
@@ -32,6 +103,7 @@
         display: flex;
         gap: 32px;
         align-items: center;
+        width: 100%;
 
         .section-line {
             background-color: $cpt-color;
@@ -127,22 +199,25 @@
             a {
                 button {
                     background-color: transparent;
-                    border-radius: 10px;
                     border: 2px solid $cpt-color;
+                    border-radius: 10px;
                     color: $cpt-color;
                     font-size: 23px;
                     line-height: 27.6px;
                     padding: 15px 30px 15px 30px;
+                    transition: all ease-in-out 125ms;
         
                     &:hover {
-                        box-shadow: $cpt-box-shadow;
+                        border: 2px solid $cpt-color-line;
+                        color: $cpt-color-line;
                         cursor: pointer;
+                        transform: scale(1.05);
                     }
                 }
             }
         }
 
-        @media (max-width: 1360px) {
+        @media (max-width: 1368px) {
             h2 {
                 font-size: 90px;
                 line-height: 104px;

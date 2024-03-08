@@ -59,28 +59,32 @@ export class MyWorkComponent {
       image: 'join.png',
       tools: 'JavaScript | HTML | CSS',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      link: 'https://github.com/Regige/join'
+      link: 'http://regina-gering.developerakademie.net/join/index.html',
+      github: 'https://github.com/Regige/join'
     },
     {
       name: 'Sharkie',
       image: 'sharkie.png',
       tools: 'JavaScript | HTML | CSS',
       description: 'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale',
-      link: 'https://github.com/Regige/join'
+      link: 'https://regina-gering.developerakademie.net/sharkie/index.html',
+      github: 'https://github.com/Regige/sharkie-game'
     },
         {
       name: 'Simple CRM',
       image: 'simple-crm.png',
       tools: 'Angular | Firebase',
       description: 'A very Simple Customer Relationship Management system working with CRUD functionality.',
-      link: 'https://github.com/Regige/join'
+      link: '',
+      github: 'https://github.com/Regige/join'
     },
     {
       name: 'Pokedex',
       image: 'pokedex.png',
       tools: 'JavaScript | HTML | CSS | Api',
       description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
-      link: 'https://github.com/Regige/join'
+      link: 'https://regina-gering.developerakademie.net/pokedex/index.html',
+      github: 'https://github.com/Regige/pokedex'
     }
   ];
 }

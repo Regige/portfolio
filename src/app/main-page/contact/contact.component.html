@@ -81,8 +81,9 @@
             (click)="inputChecked(checkboxPrivacyPolice)"
           />
           <label for="privacy-police"
-            >I've read the <a href="app-privacy-police">privacy police</a> and
-            agree to the processing of my data as outlined.</label
+            >I've read the
+            <a [routerLink]="['privacy-police']">privacy police</a> and agree to
+            the processing of my data as outlined.</label
           >
           @if (!checkboxPrivacyPolice.checked && contactForm.submitted) {
           <span class="invalid-text">Please accept the privacy policy</span>

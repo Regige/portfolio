@@ -14,20 +14,19 @@
 //     }
 // }
 
-.align-end {
-    align-items: end !important;
-    transform: translateX(-32px);
-}
+// .align-end {
+//     align-items: end !important;
+//     transform: translateX(-32px);
+// }
 
-.just-con-start {
-    justify-content: start !important;
-    transform: translateX(32px);
-}
+// .just-con-start {
+//     justify-content: start !important;
+//     transform: translateX(32px);
+// }
 
-.text-al-right {
-    text-align: right !important;
-}
-
+// .text-al-right {
+//     text-align: right !important;
+// }
 
 
 .project-img {
@@ -54,7 +53,7 @@
 
         &:hover {
             cursor: pointer;
-            transform: scale(1.05) translateY(-32px);
+            transform: scale(1.05);
         }
 
         @media (max-width: 1360px) {
@@ -75,9 +74,10 @@
         display: block;
     }
     @media (max-width:760px) {
+        justify-content: start !important;
+        transform: translateX(-32px);
         width: auto;
     }
-
 }
 
 
@@ -117,10 +117,13 @@
         font-size: 24px;
         line-height: 27.6px;
         padding: 15px 30px;
+        transition: all 125ms ease-in-out;
 
         &:hover {
             cursor: pointer;
-            box-shadow: $cpt-box-shadow;
+            color: $cpt-color-line;
+            border: 2px solid $cpt-color-line;
+            transform: scale(1.05);
         }
     }
 
@@ -168,18 +171,27 @@
 }
 
 
-// .align-end {
-//     align-items: end !important;
-//     transform: translateX(-32px);
-// }
+.align-end {
+    align-items: end;
+    transform: translateX(-32px);
 
-// .just-con-start {
-//     justify-content: start !important;
-//     transform: translateX(32px);
-// }
+    @media (max-width: 760px) {
+        transform: translateX(-80px);
+    }
+}
 
-// .text-al-right {
-//     text-align: right !important;
-// }
+.just-con-start {
+    justify-content: start;
+    transform: translateX(32px);
+
+    @media (max-width:760px) {
+        // justify-content: start !important;
+        transform: translateX(-32px);
+    }
+}
+
+.text-al-right {
+    text-align: right;
+}
 
 

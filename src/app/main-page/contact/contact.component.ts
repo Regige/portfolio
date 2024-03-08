@@ -4,12 +4,13 @@ import { InViewDirective } from '../../in-view.directive';
 import { VisibilityState } from '../../in-view.directive';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, InViewDirective, FormsModule],
+  imports: [CommonModule, InViewDirective, FormsModule, RouterModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
@@ -23,10 +24,10 @@ export class ContactComponent implements AfterViewInit {
     message: "",
     }
     
-  mailTest = true;
+  mailTest = false;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://regina-gering.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
         headers: {

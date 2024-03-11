@@ -1,10 +1,10 @@
 <header>
-  <a class="logo" href="#start-section"
+  <a class="logo" href="#start-section" (click)="checkOverlay()"
     ><span><b>R</b>egina</span></a
   >
   <div class="header-links" [class.d-none]="!mainPageDisplayed">
-    <a id="about-me-link" (click)="scrollTo('about-me')">About me</a>
-    <a id="skill-set-link" (click)="scrollTo('skill-set')">Skill set</a>
+    <a href="#about-me" id="about-me-link">About me</a>
+    <a href="#skill-set" id="skill-set-link">Skill set</a>
     <a href="#my-work">My work</a>
   </div>
   <div class="overlay-menu" [class.d-none]="!mainPageDisplayed">
@@ -21,10 +21,8 @@
       class="overlay-menu-layer"
       [ngClass]="{ 'open-overlay': overlayMenuOpen }"
     >
-      <a id="about-me-link" (click)="scrollTo('about-me'); toggleMenu()"
-        >About me</a
-      >
-      <a id="skill-set-link" (click)="scrollTo('skill-set'); toggleMenu()"
+      <a href="#about-me" id="about-me-link" (click)="toggleMenu()">About me</a>
+      <a href="#skill-set" id="skill-set-link" (click)="toggleMenu()"
         >Skill set</a
       >
       <a href="#my-work" (click)="toggleMenu()">My work</a>

@@ -38,6 +38,14 @@
     }
 }
 
+.messageSubmitted {
+    position: absolute;
+    bottom: -40px;
+    color: $cpt-color;
+    font-size: 18px;
+    line-height: 24.8px;
+}
+
 
 
 .contact-section {
@@ -314,7 +322,6 @@
                     padding: 15px 30px;
 
                     &:hover {
-                        // box-shadow: $cpt-box-shadow;
                         cursor: pointer;
                     }
 

@@ -1,19 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
-// $cpt-color: #5988FF;
 $cpt-color: #FF4747;
 $cpt-color-line: #FA7902;
 $cpt-bg-color: #c1b4a7;
-// $cpt-bg-color: #b4a494; //dunkler
-// $cpt-bg-color: white;
-// $cpt-bg-color: #141D2F;
 $cpt-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
 
 html {
     overflow-x: hidden;
-    // overflow-y: scroll;
-    // overflow-y: overlay;
-    // scrollbar-gutter: stable;
 }
 
 * {
@@ -22,15 +15,10 @@ html {
 
 body {
     background-color: $cpt-bg-color;
-    // background-image: url('assets/img/bg_colors/group.svg'), url('assets/img/bg_colors/c_mid_big.svg');
-    // background-position: top, bottom;
-    // background-repeat: no-repeat;
     color: white;
     margin: 0;
     font-family: 'Poppins';
-    // font-family: 'Montserrat';
     overflow-x: hidden;
-    // overflow-y: scroll;
 }
 
 h2 {
@@ -89,10 +77,9 @@ app-privacy-police {
 }
 
 
-.ft-baloo {
-    // font-family: 'Baloo 2'; // noch mal schauen ob das wirklich die beste Lösung ist
-    font-family: 'Poppins';
-}
+// .ft-baloo {
+//     font-family: 'Poppins';
+// }
 
 
 
@@ -103,16 +90,15 @@ app-privacy-police {
 
 
 
-
 // Scrollbar Styling
 
 /* Hide scrollbar for Chrome, Safari and Opera */
-body::-webkit-scrollbar {
+html::-webkit-scrollbar {
     display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
-body {
+html {
     -ms-overflow-style: none;
     /* IE and Edge */
     scrollbar-width: none;
@@ -120,199 +106,8 @@ body {
 }
 
 
-// ::-webkit-scrollbar {
-//     width: 12px;
-//     /* Breite der Scrollleiste */
-//     position: absolute;
-//     /* Positioniere die Scrollleiste */
-//     right: 0;
-//     /* Platziere die Scrollleiste am rechten Rand */
-//     z-index: 9999;
-//     /* Stelle sicher, dass die Scrollleiste über anderen Inhalten liegt */
-// }
-
-// ::-webkit-scrollbar-track {
-//     position: absolute;
-//     // display: none;
-//     // background: transparent;
-//     /* Hintergrundfarbe der Scrollleiste */
-// }
-
-// ::-webkit-scrollbar-thumb {
-//     background-color: $cpt-color;
-//     /* Farbe des Scrollbalkens */
-//     border-radius: 6px;
-//     /* Radius der abgerundeten Ecken */
-//     border: 3px solid transparent;
-//     /* Rand um den Scrollbalken */
-// }
-
-// ::-webkit-scrollbar-thumb:hover {
-//     background-color: #a0a0a0;
-//     /* Farbe des Scrollbalkens beim Hovern */
-// }
-
-
 
 // Fonts
-
-/* baloo-2-regular - latin */
-@font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Baloo 2';
-    font-style: normal;
-    font-weight: 400;
-    src: url('assets/fonts/baloo-2-v21-latin-regular.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* baloo-2-500 - latin */
-@font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Baloo 2';
-    font-style: normal;
-    font-weight: 500;
-    src: url('assets/fonts/baloo-2-v21-latin-500.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* baloo-2-600 - latin */
-@font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Baloo 2';
-    font-style: normal;
-    font-weight: 600;
-    src: url('assets/fonts/baloo-2-v21-latin-600.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* baloo-2-700 - latin */
-@font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Baloo 2';
-    font-style: normal;
-    font-weight: 700;
-    src: url('assets/fonts/baloo-2-v21-latin-700.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* baloo-2-800 - latin */
-@font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Baloo 2';
-    font-style: normal;
-    font-weight: 800;
-    src: url('assets/fonts/baloo-2-v21-latin-800.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-
-
-/* montserrat-100 - latin */
-@font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 100;
-    src: url('assets/fonts/montserrat-v26-latin-100.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* montserrat-200 - latin */
-@font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 200;
-    src: url('assets/fonts/montserrat-v26-latin-200.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* montserrat-300 - latin */
-@font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 300;
-    src: url('assets/fonts/montserrat-v26-latin-300.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* montserrat-regular - latin */
-@font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    src: url('assets/fonts/montserrat-v26-latin-regular.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* montserrat-500 - latin */
-@font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    src: url('assets/fonts/montserrat-v26-latin-500.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* montserrat-600 - latin */
-@font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    src: url('assets/fonts/montserrat-v26-latin-600.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* montserrat-700 - latin */
-@font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    src: url('assets/fonts/montserrat-v26-latin-700.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* montserrat-800 - latin */
-@font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 800;
-    src: url('assets/fonts/montserrat-v26-latin-800.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* montserrat-900 - latin */
-@font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 900;
-    src: url('assets/fonts/montserrat-v26-latin-900.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-
 
 /* poppins-100 - latin */
 @font-face {

@@ -17,16 +17,13 @@ export class MyWorkComponent {
 
   onVisibilityChange(event: VisibilityState, i:number) {
     if (event.view === 'VISIBLE') {
-      // Element ist sichtbar, füge Klasse .d-none hinzu
       this.showElement(i);
     } else {
-      // Element ist nicht sichtbar, entferne Klasse .d-none
       this.hideElement(i);
     }
   }
 
   showElement(i:number) {
-    // Logik zum Hinzufügen der Klasse .d-none zum Element
     let myProjectImg = document.getElementById(`my-project-img-${i}`);
     let myProjectDescription = document.getElementById(`my-project-description-${i}`);
     if (myProjectImg && myProjectDescription) {
@@ -36,7 +33,6 @@ export class MyWorkComponent {
   }
 
   hideElement(i:number) {
-    // Logik zum Entfernen der Klasse .d-none vom Element
     let myProjectImg = document.getElementById(`my-project-img-${i}`);
     let myProjectDescription = document.getElementById(`my-project-description-${i}`);
     if (myProjectImg && myProjectDescription) {
@@ -46,20 +42,13 @@ export class MyWorkComponent {
   }
 
 
-  // myProjectList = {
-  //   name: ['Join', 'Sharkie', 'CRM', 'Pokedex'],
-  //   image: ['sharkie.png','sharkie.png','sharkie.png','sharkie.png'],
-  //   tools: ['JavaScript | HTML | CSS','JavaScript | HTML | CSS','JavaScript | HTML | CSS','JavaScript | HTML | CSS'],
-  //   description: ['Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos exercitationem at distinctio vel eum incidunt consequuntur et dignissimos quaerat. Impedit!','Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos exercitationem at distinctio vel eum incidunt consequuntur et dignissimos quaerat. Impedit!','Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos exercitationem at distinctio vel eum incidunt consequuntur et dignissimos quaerat. Impedit!','Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos exercitationem at distinctio vel eum incidunt consequuntur et dignissimos quaerat. Impedit!']
-  // }
-
   myProjects = [
     {
       name: 'Join',
       image: 'join.png',
       tools: 'JavaScript | HTML | CSS',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      link: 'http://regina-gering.developerakademie.net/join/index.html',
+      link: 'https://regina-gering.com/join/index.html',
       github: 'https://github.com/Regige/join'
     },
     {
@@ -67,23 +56,23 @@ export class MyWorkComponent {
       image: 'sharkie.png',
       tools: 'JavaScript | HTML | CSS',
       description: 'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale',
-      link: 'https://regina-gering.developerakademie.net/sharkie/index.html',
+      link: 'https://regina-gering.com/sharkie/index.html',
       github: 'https://github.com/Regige/sharkie-game'
     },
-        {
+    {
       name: 'Simple CRM',
       image: 'simple-crm.png',
       tools: 'Angular | Firebase',
       description: 'A very Simple Customer Relationship Management system working with CRUD functionality.',
       link: '',
-      github: 'https://github.com/Regige/join'
+      github: ''
     },
     {
       name: 'Pokedex',
       image: 'pokedex.png',
       tools: 'JavaScript | HTML | CSS | Api',
       description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
-      link: 'https://regina-gering.developerakademie.net/pokedex/index.html',
+      link: 'https://regina-gering.com/pokedex/index.html',
       github: 'https://github.com/Regige/pokedex'
     }
   ];

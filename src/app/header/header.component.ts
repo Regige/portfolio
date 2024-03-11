@@ -22,17 +22,20 @@ export class HeaderComponent implements OnInit {
 
   constructor(private pathService: PathService) {}
 
+
   ngOnInit(): void {
       this.pathSubscription = this.pathService.currentPath$.subscribe((currentPath: string) => {
       this.updateDisplay(currentPath);
     });
   }
 
+
   ngOnDestroy(): void {
     if (this.pathSubscription) {
       this.pathSubscription.unsubscribe();
     }
   }
+
 
   updateDisplay(currentPath: string) {
     if (currentPath === 'imprint' || currentPath === 'privacy-police') {
@@ -43,24 +46,29 @@ export class HeaderComponent implements OnInit {
   }
 
 
-  scrollTo(id:string) {
-    let section = document.getElementById(id);
-    let a = document.getElementById(`${id}-link`);
+  // scrollTo(id:string) {
+  //   let section = document.getElementById(id);
+  //   let a = document.getElementById(`${id}-link`);
 
-    if (section) {
-      section.scrollIntoView({ block: "center", inline: "center" });
-    } else if(a) {
-      a.setAttribute('href', `#${id}`);
-    } else {
-      console.error(`Element with ID '${id}' not found.`);
-    }
-  }
+  //   if (section) {
+  //     section.scrollIntoView({ block: "center", inline: "center" });
+  //   } else if(a) {
+  //     a.setAttribute('href', `#${id}`);
+  //   } else {
+  //     console.error(`Element with ID '${id}' not found.`);
+  //   }
+  // }
 
 
   toggleMenu() {
 
     this.overlayMenuOpen = !this.overlayMenuOpen;
+  }
 
-    document.getElementById('menu-bar-element')
+
+  checkOverlay() {
+    if(this.overlayMenuOpen) {
+      this.toggleMenu()
+    }
   }
 }

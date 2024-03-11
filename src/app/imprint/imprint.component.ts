@@ -15,6 +15,7 @@ export class ImprintComponent {
 
   constructor(private route: ActivatedRoute, private pathService: PathService) {}
 
+  
   ngOnInit(): void {
     this.route.url.subscribe(urlSegments => {
       this.currentPath = urlSegments.join('/');

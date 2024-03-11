@@ -5,7 +5,7 @@
 >
   <div class="section-sep-element">
     <div class="section-line"></div>
-    <h2 class="ft-baloo">Contact</h2>
+    <h2>Contact</h2>
   </div>
 
   <div class="contact-container">
@@ -46,8 +46,8 @@
             placeholder="Your email"
             name="email"
             id="input-email"
+            pattern="^[a-zA-Z0-9_\-\.]+@[a-zA-Z0-9_\-\.]+\.[a-zA-Z]{2,}$"
             required
-            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
             [class.input-invalid]="!email.valid && email.touched"
           />
           @if (!email.valid && email.touched) {
@@ -96,6 +96,10 @@
         value="Send message"
         [class.btn-abled]="inputCheckboxState == true && contactForm.valid"
       />
+      @if (messageSubmitted && !name.touched && !email.touched &&
+      !message.touched) {
+      <span class="messageSubmitted">Thank you for your message!</span>
+      }
     </form>
   </div>
   <div class="cta-up-bt">

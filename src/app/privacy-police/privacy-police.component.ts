@@ -18,7 +18,7 @@ export class PrivacyPoliceComponent {
   ngOnInit(): void {
     this.route.url.subscribe(urlSegments => {
       this.currentPath = urlSegments.join('/');
-      console.log(this.currentPath);
+      // console.log(this.currentPath);
     });
 
     this.pathService.setCurrentPath(this.currentPath);

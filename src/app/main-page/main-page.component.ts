@@ -20,11 +20,11 @@ export class MainPageComponent {
 
   constructor(private route: ActivatedRoute, private pathService: PathService) {}
 
-  
+
   ngOnInit(): void {
     this.route.url.subscribe(urlSegments => {
       this.currentPath = urlSegments.join('/');
-      console.log('it is working', this.currentPath);
+      // console.log('it is working', this.currentPath);
     });
 
     this.pathService.setCurrentPath(this.currentPath);

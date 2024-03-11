@@ -35,7 +35,7 @@ export class InViewDirective implements AfterViewInit, OnDestroy {
 
 
   _getVisibilityState(entry: IntersectionObserverEntry): VisibilityState {
-    console.log(entry);
+    // console.log(entry);
     let result = entry.isIntersecting ? 'VISIBLE' : 'HIDDEN';
     return { elem: this._elementRef, view: result } as VisibilityState;
   }

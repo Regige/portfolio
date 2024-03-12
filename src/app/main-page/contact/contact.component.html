@@ -32,9 +32,13 @@
             name="name"
             id="input-name"
             required
-            [class.input-invalid]="!name.valid && name.touched"
+            [class.input-invalid]="
+              (!name.valid && name.touched) ||
+              (!name.valid && contactForm.submitted)
+            "
           />
-          @if (!name.valid && name.touched) {
+          @if (!name.valid && name.touched || !name.valid &&
+          contactForm.submitted) {
           <span class="invalid-text">Your name is required</span>
           }
         </div>
@@ -48,9 +52,13 @@
             id="input-email"
             pattern="^[a-zA-Z0-9_\-\.]+@[a-zA-Z0-9_\-\.]+\.[a-zA-Z]{2,}$"
             required
-            [class.input-invalid]="!email.valid && email.touched"
+            [class.input-invalid]="
+              (!email.valid && email.touched) ||
+              (!email.valid && contactForm.submitted)
+            "
           />
-          @if (!email.valid && email.touched) {
+          @if (!email.valid && email.touched || !email.valid &&
+          contactForm.submitted) {
           <span class="invalid-text">Your email is required</span>
           }
         </div>
@@ -64,9 +72,13 @@
             cols="30"
             rows="10"
             required
-            [class.input-invalid]="!message.valid && message.touched"
+            [class.input-invalid]="
+              (!message.valid && message.touched) ||
+              (!message.valid && contactForm.submitted)
+            "
           ></textarea>
-          @if (!message.valid && message.touched) {
+          @if (!message.valid && message.touched || !message.valid &&
+          contactForm.submitted) {
           <span class="invalid-text">Your message is empty</span>
           }
         </div>
@@ -79,6 +91,9 @@
             class="input-check"
             required
             (click)="inputChecked(checkboxPrivacyPolice)"
+            [class.input-invalid-checkbox]="
+              !checkboxPrivacyPolice.checked && contactForm.submitted
+            "
           />
           <label for="privacy-police"
             >I've read the

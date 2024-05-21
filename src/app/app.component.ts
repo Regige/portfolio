@@ -19,6 +19,11 @@ export class AppComponent {
 
   constructor() {}
 
+  /**
+   * When router-outlet is activated the window scrolls to position x-coord: 0, y-coord: 0
+   * 
+   * @param _event - Variable just signals that the event was activated. Is not uesed tho.
+   */
   onActivate(_event: any): void {
     window.scroll(0,0);
   }

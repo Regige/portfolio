@@ -49,7 +49,7 @@ export class MyWorkComponent {
       tools: 'JavaScript | HTML | CSS',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       link: 'https://regina-gering.com/join/index.html',
-      github: 'https://github.com/Regige/join'
+      github: 'https://github.com/Regige/join-task-manager'
     },
     {
       name: 'Sharkie',
@@ -60,20 +60,20 @@ export class MyWorkComponent {
       github: 'https://github.com/Regige/sharkie-game'
     },
     {
-      name: 'Simple CRM',
-      image: 'simple-crm.png',
+      name: 'DABubble',
+      image: 'DABubble_coming_soon.png',
       tools: 'Angular | Firebase',
-      description: 'A very Simple Customer Relationship Management system working with CRUD functionality.',
+      description: 'DaBubble is a chat messenger application for team communication including file sharing and authentication. It is inspired by Slack.',
       link: '',
       github: ''
     },
-    {
-      name: 'Pokedex',
-      image: 'pokedex.png',
-      tools: 'JavaScript | HTML | CSS | Api',
-      description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
-      link: 'https://regina-gering.com/pokedex/index.html',
-      github: 'https://github.com/Regige/pokedex'
-    }
+    // {
+    //   name: 'Pokedex',
+    //   image: 'pokedex.png',
+    //   tools: 'JavaScript | HTML | CSS | Api',
+    //   description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
+    //   link: 'https://regina-gering.com/pokedex/index.html',
+    //   github: 'https://github.com/Regige/pokedex'
+    // }
   ];
 }

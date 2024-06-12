@@ -61,11 +61,11 @@ export class MyWorkComponent {
     },
     {
       name: 'DABubble',
-      image: 'DABubble_coming_soon.png',
+      image: 'dabubble.png',
       tools: 'Angular | Firebase',
       description: 'DaBubble is a chat messenger application for team communication including file sharing and authentication. It is inspired by Slack.',
-      link: '',
-      github: ''
+      link: 'https://dabubble.regina-gering.com/',
+      github: 'https://github.com/Dogan36/DaBubble'
     },
     // {
     //   name: 'Pokedex',

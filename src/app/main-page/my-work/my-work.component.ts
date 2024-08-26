@@ -67,6 +67,14 @@ export class MyWorkComponent {
       link: 'https://dabubble.regina-gering.com/',
       github: 'https://github.com/Dogan36/DaBubble'
     },
+    {
+      name: 'Videoflix',
+      image: 'videoflix_coming_soon.png',
+      tools: 'Angular | Django',
+      description: 'Videoflix is a video platform to watch videos. Users can register and get access to the content via authentication.',
+      link: '',
+      github: 'https://github.com/Regige/videoflix_backend'
+    },
     // {
     //   name: 'Pokedex',
     //   image: 'pokedex.png',

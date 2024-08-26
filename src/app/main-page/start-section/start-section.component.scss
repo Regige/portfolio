@@ -29,7 +29,13 @@
         
             .profil-img {
                 transition: all 125ms ease-in-out;
-                width: 0;
+                width: 414px;
+            }
+
+            @media (min-width: 3441px) {
+                .profil-img {
+                    width: 0px;
+                }
             }
 
             @media (max-width: 3440px) {
@@ -70,7 +76,7 @@
                 }
                 .profil-img {
                     padding-top: 64px;
-                 width: 400px;
+                    width: 400px;
                 }
             }
 

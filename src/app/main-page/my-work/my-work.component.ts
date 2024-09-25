@@ -49,7 +49,8 @@ export class MyWorkComponent {
       tools: 'JavaScript | HTML | CSS',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       link: 'https://regina-gering.com/join/index.html',
-      github: 'https://github.com/Regige/join-task-manager'
+      github: 'https://github.com/Regige/join-task-manager',
+      githubBackend: '_'
     },
     {
       name: 'Sharkie',
@@ -57,7 +58,8 @@ export class MyWorkComponent {
       tools: 'JavaScript | HTML | CSS',
       description: 'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale',
       link: 'https://regina-gering.com/sharkie/index.html',
-      github: 'https://github.com/Regige/sharkie-game'
+      github: 'https://github.com/Regige/sharkie-game',
+      githubBackend: '_'
     },
     {
       name: 'DABubble',
@@ -65,15 +67,17 @@ export class MyWorkComponent {
       tools: 'Angular | Firebase',
       description: 'DaBubble is a chat messenger application for team communication including file sharing and authentication. It is inspired by Slack.',
       link: 'https://dabubble.regina-gering.com/',
-      github: 'https://github.com/Dogan36/DaBubble'
+      github: 'https://github.com/Dogan36/DaBubble',
+      githubBackend: '_'
     },
     {
       name: 'Videoflix',
-      image: 'videoflix_coming_soon.png',
+      image: 'videoflix.png',
       tools: 'Angular | Django',
       description: 'Videoflix is a video platform to watch videos. Users can register and get access to the content via authentication.',
-      link: '',
-      github: 'https://github.com/Regige/videoflix_backend'
+      link: 'https://videoflix.regina-gering.com',
+      github: 'https://github.com/Regige/videoflix_frontend',
+      githubBackend: 'https://github.com/Regige/videoflix_backend'
     },
     // {
     //   name: 'Pokedex',
